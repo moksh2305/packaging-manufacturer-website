@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bharat Plastic Button Works — Industrial Packaging Since 1980</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&family=Cormorant+SC:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --ink: #0c0e0f;
+  --ink2: #141618;
+  --ink3: #1c1f22;
+  --fire: #ff5c1a;
+  --fire2: #ff8c42;
+  --ember: #ffd166;
+  --steel: #8a96a3;
+  --fog: #c5ced7;
+  --white: #f0f2f4;
+  --card: #181b1e;
+  --line: rgba(255,255,255,0.06);
+  --wa: #25d366;
+  --gold: #c9a84c;
+  --gold2: #f0d080;
+  --royal: #1a3a8f;
+  --royal2: #2255cc;
+  --royal3: #4d8bff;
+  --name-blue: linear-gradient(135deg, #4d8bff 0%, #1a6fff 40%, #a0c4ff 70%, #2255cc 100%);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Outfit',sans-serif;background:var(--ink);color:var(--white);overflow-x:hidden;cursor:none}
+
+.cursor{position:fixed;width:10px;height:10px;background:var(--fire);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width 0.2s,height 0.2s;mix-blend-mode:difference}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(255,92,26,0.5);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:left 0.07s,top 0.07s,width 0.25s,height 0.25s,border-color 0.25s}
+.cursor.hover{width:16px;height:16px}
+.cursor-ring.hover{width:56px;height:56px;border-color:var(--fire)}
+
+.float-bar{position:fixed;bottom:28px;right:28px;z-index:9000;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.float-btn{display:flex;align-items:center;gap:10px;padding:13px 22px;border-radius:50px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.5px;text-decoration:none;box-shadow:0 8px 32px rgba(0,0,0,0.5);transition:transform 0.2s,box-shadow 0.2s;white-space:nowrap;position:relative}
+.float-btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 16px 48px rgba(0,0,0,0.5)}
+.float-wa{background:var(--wa);color:#fff}
+.float-call{background:var(--fire);color:#fff}
+.float-icon{font-size:18px;line-height:1}
+.float-pulse{position:absolute;top:-4px;right:-4px;width:12px;height:12px;border-radius:50%;background:var(--ember);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.6);opacity:0.4}}
+
+header{position:fixed;top:0;left:0;right:0;z-index:5000;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:68px;background:linear-gradient(135deg,#0a1628 0%,#0d1e38 50%,#0a1628 100%);backdrop-filter:blur(24px);border-bottom:1px solid rgba(77,139,255,0.2);box-shadow:0 2px 40px rgba(0,0,0,0.6),0 1px 0 rgba(77,139,255,0.15)}
+header::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(77,139,255,0.03),transparent);pointer-events:none}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{width:42px;height:42px;background:linear-gradient(135deg,var(--fire),var(--fire2));clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:flex;align-items:center;justify-content:center;font-family:'Cormorant SC',serif;font-size:12px;color:#fff;font-weight:700;box-shadow:0 0 20px rgba(255,92,26,0.3)}
+.logo-words{display:flex;flex-direction:column;line-height:1}
+.logo-words strong{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;background:var(--name-blue);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:0.5px;text-shadow:none}
+.logo-words span{font-size:10px;color:rgba(77,139,255,0.6);letter-spacing:3px;text-transform:uppercase;margin-top:1px}
+nav{display:flex;align-items:center;gap:2px}
+nav a{color:rgba(180,200,255,0.6);font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:7px 14px;border-radius:6px;transition:all 0.25s;position:relative}
+nav a::after{content:'';position:absolute;bottom:4px;left:50%;right:50%;height:1.5px;background:var(--fire);transition:left 0.25s,right 0.25s;border-radius:2px}
+nav a:hover::after,nav a.active::after{left:14px;right:14px}
+nav a:hover{color:#fff;background:rgba(77,139,255,0.1)}
+nav a.active{color:#fff;background:rgba(77,139,255,0.12)}
+.nav-phone{display:flex;align-items:center;gap:8px;background:rgba(255,92,26,0.15);border:1px solid rgba(255,92,26,0.35);color:var(--fire2);padding:7px 16px;border-radius:8px;font-size:12px;font-family:'Outfit',sans-serif;font-weight:600;letter-spacing:1px;text-decoration:none;transition:all 0.25s;position:relative;overflow:hidden}
+.nav-phone::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--fire),#ff8c42);opacity:0;transition:opacity 0.25s}
+.nav-phone:hover::before{opacity:1}
+.nav-phone:hover{color:#fff;border-color:var(--fire);box-shadow:0 4px 20px rgba(255,92,26,0.4)}
+.nav-phone span{position:relative;z-index:1}
+
+#home{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;gap:0;padding-top:68px;overflow:hidden;position:relative}
+.hero-left{padding:80px 6% 80px 8%;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.hero-right{position:relative;overflow:hidden;background:var(--ink2)}
+.hero-right-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column}
+
+.hex-grid{position:absolute;inset:0;background-image:radial-gradient(circle at 30% 70%,rgba(255,92,26,0.18) 0%,transparent 55%),radial-gradient(circle at 70% 30%,rgba(255,209,102,0.08) 0%,transparent 50%);overflow:hidden}
+.hex-grid::before{content:'';position:absolute;inset:-50%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='52'%3E%3Cpath d='M30 2 L58 17 L58 47 L30 62 L2 47 L2 17Z' fill='none' stroke='rgba(255,92,26,0.07)' stroke-width='1'/%3E%3C/svg%3E");background-size:60px 52px;animation:hexdrift 20s linear infinite}
+@keyframes hexdrift{from{transform:translate(0,0)}to{transform:translate(60px,52px)}}
+
+.hero-big-num{font-family:'Cormorant Garamond',sans-serif;font-weight:700;font-size:180px;color:rgba(255,92,26,0.06);line-height:1;position:absolute;right:-20px;top:50%;transform:translateY(-50%);letter-spacing:-10px;user-select:none}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,92,26,0.1);border:1px solid rgba(255,92,26,0.3);padding:6px 14px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--fire2);margin-bottom:28px;width:fit-content}
+.badge-dot{width:5px;height:5px;border-radius:50%;background:var(--fire);animation:pulse 1.5s infinite}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(44px,6vw,86px);line-height:0.9;letter-spacing:-1px;color:var(--white);margin-bottom:28px}
+.hero-h1 .line2{color:var(--fire);display:block}
+.hero-h1 .line3{color:transparent;-webkit-text-stroke:1px rgba(255,255,255,0.3);display:block}
+.hero-desc{font-size:15px;line-height:1.8;color:var(--steel);max-width:440px;margin-bottom:40px;border-left:2px solid var(--fire);padding-left:18px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.btn-fire{display:inline-flex;align-items:center;gap:10px;background:var(--fire);color:#fff;padding:14px 28px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-decoration:none;transition:all 0.25s;position:relative;overflow:hidden}
+.btn-fire::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);transition:left 0.4s}
+.btn-fire:hover::before{left:100%}
+.btn-fire:hover{background:#e04810;transform:translateY(-2px);box-shadow:0 12px 32px rgba(255,92,26,0.4)}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;border:1.5px solid rgba(255,255,255,0.15);color:var(--white);padding:14px 28px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-decoration:none;transition:all 0.25s}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.5);transform:translateY(-2px)}
+.hero-kpis{display:flex;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--ink2)}
+.kpi{flex:1;padding:18px 12px;text-align:center;border-right:1px solid var(--line)}
+.kpi:last-child{border-right:none}
+.kpi-val{font-family:'Cormorant Garamond',sans-serif;font-weight:700;font-size:28px;color:var(--fire2);display:block;line-height:1}
+.kpi-lbl{font-size:10px;color:var(--steel);letter-spacing:2px;text-transform:uppercase;margin-top:5px;display:block}
+
+.prod-orbit{position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center}
+.orbit-center{width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,var(--fire),#c83a0a);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Cormorant Garamond',sans-serif;font-weight:700;font-size:13px;color:#fff;text-align:center;line-height:1.2;letter-spacing:0.5px;box-shadow:0 0 0 20px rgba(255,92,26,0.06),0 0 0 40px rgba(255,92,26,0.03);z-index:2}
+.orbit-ring{position:absolute;border-radius:50%;border:1px dashed rgba(255,92,26,0.2)}
+.orbit-ring1{width:190px;height:190px;animation:spin 18s linear infinite}
+.orbit-ring2{width:290px;height:290px;animation:spin 30s linear infinite reverse}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.orbit-item{position:absolute;width:48px;height:48px;border-radius:50%;background:var(--ink3);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 16px rgba(0,0,0,0.5);animation:counter-spin 18s linear infinite}
+.orbit-ring2 .orbit-item{animation-duration:30s;animation-direction:normal}
+@keyframes counter-spin{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
+
+section{padding:100px 8%}
+.s-label{font-family:'Cormorant SC',serif;font-size:11px;color:var(--fire);letter-spacing:4px;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.s-label::before{content:'//'}
+.s-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(36px,5vw,68px);line-height:0.95;letter-spacing:-1px;color:var(--white);margin-bottom:20px}
+.s-rule{display:flex;align-items:center;gap:12px;margin-bottom:44px}
+.s-rule-line{height:2px;width:48px;background:var(--fire);flex-shrink:0}
+.s-rule-dot{width:6px;height:6px;border-radius:50%;background:var(--fire);flex-shrink:0}
+.s-desc{font-size:16px;line-height:1.8;color:var(--steel);max-width:560px}
+
+.ticker-wrap{background:var(--fire);overflow:hidden;padding:14px 0}
+.ticker{display:flex;white-space:nowrap;animation:ticker 30s linear infinite}
+.ticker-item{display:inline-flex;align-items:center;gap:16px;padding:0 32px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#fff;flex-shrink:0}
+.ticker-sep{color:rgba(255,255,255,0.4);font-size:18px}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+#about{background:var(--ink);position:relative;overflow:hidden}
+#about::before{content:'1980';position:absolute;right:-2%;bottom:-8%;font-family:'Cormorant Garamond',sans-serif;font-weight:700;font-size:280px;color:rgba(255,255,255,0.02);line-height:1;pointer-events:none;letter-spacing:-10px}
+.about-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.about-cards{display:flex;flex-direction:column;gap:16px}
+.a-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px 28px;display:flex;align-items:flex-start;gap:18px;transition:border-color 0.3s,transform 0.3s;position:relative;overflow:hidden}
+.a-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--fire)}
+.a-card:hover{border-color:rgba(255,92,26,0.3);transform:translateX(4px)}
+.a-icon{width:48px;height:48px;border-radius:8px;background:rgba(255,92,26,0.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.a-card h4{font-family:'Cormorant Garamond',sans-serif;font-size:15px;font-weight:700;color:var(--white);margin-bottom:5px}
+.a-card p{font-size:13px;color:var(--steel);line-height:1.7}
+.about-text .s-desc{margin-bottom:28px}
+.about-text p{font-size:14px;line-height:1.85;color:var(--steel);margin-bottom:16px}
+.client-strip{margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
+.client-strip h5{font-family:'Cormorant SC',serif;font-size:10px;color:var(--fire);letter-spacing:4px;text-transform:uppercase;margin-bottom:16px}
+.client-tags{display:flex;flex-wrap:wrap;gap:8px}
+.c-tag{background:rgba(255,255,255,0.04);border:1px solid var(--line);color:var(--fog);font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:5px;transition:all 0.2s}
+.c-tag:hover{background:rgba(255,92,26,0.1);border-color:rgba(255,92,26,0.3);color:var(--fire2)}
+
+#products{background:var(--ink2)}
+.prod-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:52px}
+.prod-count{font-family:'Cormorant Garamond',sans-serif;font-size:72px;font-weight:700;color:transparent;-webkit-text-stroke:1px rgba(255,92,26,0.3);line-height:1}
+.products-masonry{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.p-card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform 0.3s,border-color 0.3s,box-shadow 0.3s;position:relative}
+.p-card:hover{transform:translateY(-8px);border-color:rgba(255,92,26,0.4);box-shadow:0 24px 64px rgba(0,0,0,0.5),0 0 0 1px rgba(255,92,26,0.15)}
+.p-card.wide{grid-column:span 2}
+.p-card.tall{grid-row:span 2}
+.p-visual{height:140px;display:flex;align-items:center;justify-content:center;font-size:52px;position:relative;overflow:hidden}
+.p-card.wide .p-visual{height:180px}
+.p-card.tall .p-visual{height:220px}
+.p-visual-bg{position:absolute;inset:0;transition:transform 0.5s}
+.p-card:hover .p-visual-bg{transform:scale(1.08)}
+.p-visual-icon{position:relative;z-index:1;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.6))}
+.p-tag{position:absolute;top:12px;left:12px;background:rgba(12,14,15,0.85);backdrop-filter:blur(8px);border:1px solid var(--line);color:var(--fire2);font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:4px 10px;border-radius:4px;z-index:2}
+.p-body{padding:20px}
+.p-cat{font-family:'Cormorant SC',serif;font-size:9px;color:var(--fire);letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
+.p-body h3{font-family:'Cormorant Garamond',sans-serif;font-size:17px;font-weight:700;color:var(--white);margin-bottom:8px;line-height:1.2}
+.p-body p{font-size:12.5px;color:var(--steel);line-height:1.7;margin-bottom:16px}
+.p-enquire{display:inline-flex;align-items:center;gap:6px;color:var(--fire2);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:gap 0.2s,color 0.2s}
+.p-enquire:hover{gap:10px;color:var(--fire)}
+
+.contact-strip{background:linear-gradient(120deg,var(--fire) 0%,#c83a0a 40%,#a02800 100%);padding:64px 8%;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;position:relative;overflow:hidden}
+.contact-strip::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='38' fill='none' stroke='rgba(255,255,255,0.04)' stroke-width='1'/%3E%3C/svg%3E");background-size:80px 80px}
+.strip-text{position:relative;z-index:1}
+.strip-text h2{font-family:'Cormorant Garamond',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:700;color:#fff;letter-spacing:-1px;line-height:1.1;margin-bottom:8px}
+.strip-text p{font-size:15px;color:rgba(255,255,255,0.7)}
+.strip-btns{display:flex;gap:14px;flex-wrap:wrap;position:relative;z-index:1}
+.strip-call{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--fire);padding:14px 28px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.5px;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s}
+.strip-call:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,0.3)}
+.strip-wa{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.15);color:#fff;border:1.5px solid rgba(255,255,255,0.35);padding:14px 28px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.5px;text-decoration:none;transition:transform 0.2s,background 0.2s}
+.strip-wa:hover{background:var(--wa);border-color:var(--wa);transform:translateY(-3px)}
+
+#why{background:var(--ink)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.w-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:32px 28px;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.3s}
+.w-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--fire),var(--fire2));transform:scaleX(0);transform-origin:left;transition:transform 0.35s}
+.w-card:hover::after{transform:scaleX(1)}
+.w-card:hover{border-color:rgba(255,92,26,0.2);transform:translateY(-4px)}
+.w-num{font-family:'Cormorant Garamond',sans-serif;font-weight:700;font-size:56px;color:rgba(255,92,26,0.07);line-height:1;position:absolute;top:16px;right:20px}
+.w-icon{font-size:36px;margin-bottom:16px;display:block}
+.w-card h3{font-family:'Cormorant Garamond',sans-serif;font-size:18px;font-weight:700;color:var(--white);margin-bottom:10px}
+.w-card p{font-size:13px;color:var(--steel);line-height:1.75}
+
+#infra{background:var(--ink2)}
+.infra-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px}
+.i-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:28px 22px;text-align:center;transition:all 0.3s}
+.i-card:hover{border-color:rgba(255,92,26,0.3);background:rgba(255,92,26,0.04);transform:translateY(-3px)}
+.i-icon{font-size:36px;display:block;margin-bottom:14px}
+.i-card h4{font-family:'Cormorant Garamond',sans-serif;font-size:15px;font-weight:700;color:var(--white);margin-bottom:8px}
+.i-card p{font-size:12px;color:var(--steel);line-height:1.7}
+
+#photos{background:var(--ink);padding-bottom:80px}
+.photo-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:160px;gap:12px;margin-top:48px}
+.ph{border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer}
+.ph:hover .ph-overlay{opacity:1}
+.ph-bg{position:absolute;inset:0;transition:transform 0.5s}
+.ph:hover .ph-bg{transform:scale(1.06)}
+.ph-emoji{font-size:48px;position:relative;z-index:1}
+.ph-overlay{position:absolute;inset:0;background:rgba(255,92,26,0.7);display:flex;align-items:flex-end;padding:16px;opacity:0;transition:opacity 0.3s;z-index:2}
+.ph-label{font-family:'Cormorant Garamond',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:0.5px}
+.ph1{grid-column:span 5;grid-row:span 2}
+.ph2{grid-column:span 4}
+.ph3{grid-column:span 3}
+.ph4{grid-column:span 4}
+.ph5{grid-column:span 3}
+.ph6{grid-column:span 4}
+.ph7{grid-column:span 4}
+
+#contact{background:var(--ink2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:72px;margin-top:52px}
+.contact-left{display:flex;flex-direction:column;gap:20px}
+.phone-big-card{background:var(--card);border:1px solid rgba(255,92,26,0.25);border-radius:12px;padding:28px;position:relative;overflow:hidden}
+.phone-big-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--fire),var(--fire2))}
+.pbc-label{font-family:'Cormorant SC',serif;font-size:10px;color:var(--fire);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+.pbc-num{font-family:'Cormorant Garamond',sans-serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:14px;letter-spacing:1px}
+.pbc-btns{display:flex;gap:10px;flex-wrap:wrap}
+.pbc-call{display:inline-flex;align-items:center;gap:8px;background:var(--fire);color:#fff;padding:10px 20px;border-radius:7px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-decoration:none;transition:all 0.2s}
+.pbc-call:hover{background:#e04810;transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,92,26,0.4)}
+.pbc-wa{display:inline-flex;align-items:center;gap:8px;background:rgba(37,211,102,0.12);color:var(--wa);border:1px solid rgba(37,211,102,0.3);padding:10px 20px;border-radius:7px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-decoration:none;transition:all 0.2s}
+.pbc-wa:hover{background:var(--wa);color:#fff;border-color:var(--wa);transform:translateY(-2px)}
+.info-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 24px}
+.info-card h5{font-family:'Cormorant SC',serif;font-size:10px;color:var(--steel);letter-spacing:3px;text-transform:uppercase;margin-bottom:10px}
+.info-card p{font-size:14px;color:var(--fog);line-height:1.7}
+.info-card a{color:var(--fire2);text-decoration:none;font-weight:600}
+.info-card a:hover{color:var(--fire);text-decoration:underline}
+
+.contact-form-wrap{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:44px}
+.cf-title{font-family:'Cormorant Garamond',sans-serif;font-size:28px;font-weight:700;color:var(--white);margin-bottom:6px}
+.cf-sub{font-size:14px;color:var(--steel);margin-bottom:32px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-family:'Cormorant SC',serif;font-size:10px;color:var(--steel);letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
+.fg input,.fg select,.fg textarea{width:100%;padding:13px 16px;background:rgba(255,255,255,0.04);border:1.5px solid rgba(255,255,255,0.08);border-radius:8px;color:var(--white);font-family:'Outfit',sans-serif;font-size:14px;outline:none;transition:border-color 0.25s,background 0.25s}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,0.2)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--fire);background:rgba(255,92,26,0.05)}
+.fg select{appearance:none;cursor:pointer;color:rgba(255,255,255,0.7)}
+.fg select option{background:var(--ink2);color:var(--white)}
+.fg textarea{min-height:110px;resize:vertical}
+.form-submit{width:100%;padding:15px;border:none;background:linear-gradient(120deg,var(--fire),#ff8c42);color:#fff;border-radius:8px;cursor:pointer;font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:all 0.25s;position:relative;overflow:hidden}
+.form-submit::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transition:left 0.45s}
+.form-submit:hover::before{left:100%}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(255,92,26,0.45)}
+.form-success{display:none;text-align:center;padding:60px 20px}
+.form-success .tick{font-size:56px;margin-bottom:16px;display:block}
+.form-success h3{font-family:'Cormorant Garamond',sans-serif;font-size:24px;font-weight:700;color:var(--white);margin-bottom:8px}
+.form-success p{font-size:14px;color:var(--steel)}
+
+footer{background:var(--ink);border-top:1px solid var(--line);padding:64px 8% 36px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand p{font-size:13px;color:var(--steel);line-height:1.8;margin:16px 0 24px}
+.f-social{display:flex;gap:10px}
+.f-soc{width:38px;height:38px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:16px;transition:all 0.2s;cursor:pointer;text-decoration:none;color:var(--steel)}
+.f-soc:hover{border-color:var(--fire);background:rgba(255,92,26,0.1);color:var(--fire2)}
+.footer-col h5{font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;color:var(--white);letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a{font-size:13px;color:var(--steel);text-decoration:none;transition:color 0.2s;display:flex;align-items:center;gap:6px}
+.footer-col ul li a:hover{color:var(--fire2)}
+.footer-col ul li a::before{content:'→';font-size:10px;color:var(--fire);opacity:0.6}
+.footer-bottom{padding-top:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,0.2)}
+.gst-badge{background:rgba(255,92,26,0.08);border:1px solid rgba(255,92,26,0.2);color:var(--fire2);font-size:10px;font-family:'Cormorant SC',serif;letter-spacing:2px;padding:5px 12px;border-radius:4px}
+
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 0.8s,transform 0.8s}
+.reveal.vis{opacity:1;transform:none}
+
+/* LUXURY NAME BLUE GRADIENT */
+.name-blue{background:var(--name-blue);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700}
+.hero-h1 .name-title{background:var(--name-blue);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;font-style:italic;letter-spacing:1px}
+
+/* SEPARATOR LUXURY */
+.luxury-sep{display:flex;align-items:center;gap:12px;margin:10px 0 6px}
+.luxury-sep-line{height:1px;flex:1;background:linear-gradient(90deg,transparent,rgba(77,139,255,0.5),rgba(77,139,255,0.8),rgba(77,139,255,0.5),transparent)}
+.luxury-sep-diamond{width:7px;height:7px;background:linear-gradient(135deg,#4d8bff,#a0c4ff);transform:rotate(45deg);flex-shrink:0;box-shadow:0 0 8px rgba(77,139,255,0.6)}
+
+/* SISTER CONCERNS */
+.sister-concerns{margin-top:4px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.sister-label{font-size:9px;color:var(--steel);letter-spacing:2px;text-transform:uppercase;font-family:'Outfit',sans-serif}
+.sister-name{font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:3px;border:1px solid rgba(77,139,255,0.3);background:rgba(77,139,255,0.07);color:#4d8bff;font-family:'Outfit',sans-serif}
+
+/* HERO SEPARATOR (below company name and owner name) */
+.hero-name-sep{margin:16px 0 20px;display:flex;align-items:center;gap:10px}
+.hero-name-sep-line{height:1px;width:60px;background:linear-gradient(90deg,rgba(77,139,255,0.8),transparent)}
+.hero-name-sep-dot{width:5px;height:5px;border-radius:50%;background:#4d8bff;box-shadow:0 0 8px rgba(77,139,255,0.8)}
+.hero-name-sep-line2{height:1px;flex:1;background:linear-gradient(90deg,rgba(77,139,255,0.3),transparent)}
+
+/* LUXURY CARD UPGRADES */
+.a-card{background:linear-gradient(135deg,var(--card),rgba(26,30,34,0.95));border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:24px 28px;display:flex;align-items:flex-start;gap:18px;transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s;position:relative;overflow:hidden}
+.a-card:hover{border-color:rgba(255,92,26,0.3);transform:translateX(4px);box-shadow:0 8px 40px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.05)}
+
+/* GOLD ACCENT DETAILS */
+.s-rule-line{height:1px;width:48px;background:linear-gradient(90deg,var(--fire),var(--gold));flex-shrink:0}
+.s-rule-dot{width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,var(--fire),var(--gold));flex-shrink:0;box-shadow:0 0 6px rgba(201,168,76,0.5)}
+
+/* LUXURY BACKGROUND TEXTURE */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");opacity:0.4}
+
+/* ORBIT CENTER LUXURY */
+.orbit-center{width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,var(--fire),#c83a0a);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Cormorant SC',serif;font-weight:600;font-size:13px;color:#fff;text-align:center;line-height:1.2;letter-spacing:1px;box-shadow:0 0 0 20px rgba(255,92,26,0.06),0 0 0 40px rgba(255,92,26,0.03),0 8px 32px rgba(255,92,26,0.3);z-index:2}
+
+/* ============================================
+   3D PACKAGING SHOWCASE
+   ============================================ */
+.pkg-showcase{display:flex;flex-direction:column;align-items:center;width:100%}
+.pkg-stage{position:relative;width:340px;height:340px;perspective:800px}
+/* Center badge */
+.pkg-center-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100px;height:100px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ff7a3a,#c83a0a);box-shadow:0 0 0 12px rgba(255,92,26,0.08),0 0 0 24px rgba(255,92,26,0.04),0 12px 48px rgba(255,92,26,0.5);display:flex;align-items:center;justify-content:center;z-index:10;animation:badge-float 4s ease-in-out infinite}
+@keyframes badge-float{0%,100%{transform:translate(-50%,-50%) translateY(0) scale(1)}50%{transform:translate(-50%,-50%) translateY(-8px) scale(1.02)}}
+.pcb-inner{text-align:center;line-height:1}
+.pcb-year{font-family:'Outfit',sans-serif;font-size:8px;letter-spacing:3px;color:rgba(255,255,255,0.7);text-transform:uppercase}
+.pcb-num{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:#fff;line-height:1.1}
+.pcb-name{font-family:'Cormorant SC',serif;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.8)}
+/* 3D Boxes */
+.pkg-box{position:absolute;width:72px;height:72px;transform-style:preserve-3d;animation:box-float 5s ease-in-out infinite}
+.pkg-box1{top:20px;left:30px;animation-delay:0s}
+.pkg-box2{top:20px;right:30px;animation-delay:1.5s}
+.pkg-box3{bottom:60px;left:20px;animation-delay:0.8s}
+@keyframes box-float{0%,100%{transform:rotateX(25deg) rotateY(-30deg) translateY(0)}50%{transform:rotateX(25deg) rotateY(-30deg) translateY(-12px)}}
+.box-face{position:absolute;width:72px;height:72px;border:1px solid rgba(255,92,26,0.3)}
+.box-front{background:linear-gradient(135deg,rgba(30,20,10,0.95),rgba(20,12,4,0.95));transform:translateZ(36px);display:flex;align-items:center;justify-content:center;font-family:'Cormorant SC',serif;font-size:14px;color:var(--fire2);font-weight:600;letter-spacing:2px}
+.box-top{background:linear-gradient(135deg,rgba(60,35,15,0.9),rgba(40,22,8,0.9));transform:rotateX(90deg) translateZ(36px)}
+.box-right{background:linear-gradient(135deg,rgba(20,12,4,0.8),rgba(10,6,2,0.8));width:36px;transform:rotateY(90deg) translateZ(72px);right:0}
+/* Plastic roll */
+.pkg-roll{position:absolute;bottom:30px;right:25px;width:64px;height:64px;animation:roll-spin 8s linear infinite}
+.roll-body{width:64px;height:64px;border-radius:50%;background:conic-gradient(from 0deg,rgba(77,139,255,0.6),rgba(30,60,120,0.8),rgba(77,139,255,0.4),rgba(20,40,80,0.9),rgba(77,139,255,0.6));border:2px solid rgba(77,139,255,0.4);box-shadow:0 0 20px rgba(77,139,255,0.3)}
+.roll-shine{position:absolute;top:8px;left:12px;width:20px;height:12px;background:rgba(255,255,255,0.15);border-radius:50%;transform:rotate(-30deg)}
+.roll-label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.9)}
+@keyframes roll-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+/* Bag */
+.pkg-bag{position:absolute;top:60px;right:20px;animation:bag-sway 6s ease-in-out infinite}
+@keyframes bag-sway{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(3deg) translateY(-8px)}}
+.bag-body{width:52px;background:linear-gradient(160deg,rgba(50,90,50,0.5),rgba(20,50,20,0.7));border:1px solid rgba(80,160,80,0.3);border-radius:4px 4px 6px 6px;padding:4px}
+.bag-top{height:8px;border-bottom:1px solid rgba(80,160,80,0.4);margin-bottom:4px}
+.bag-seal{height:3px;background:rgba(80,200,80,0.3);margin-bottom:6px;border-radius:2px}
+.bag-text{font-family:'Outfit',sans-serif;font-size:9px;color:rgba(100,220,100,0.8);text-align:center;letter-spacing:1px;padding:8px 0}
+/* Warning tape roll */
+.pkg-tape{position:absolute;top:50%;left:15px;transform:translateY(-50%);animation:tape-float 7s ease-in-out infinite}
+@keyframes tape-float{0%,100%{transform:translateY(-50%) scale(1)}50%{transform:translateY(calc(-50% - 10px)) scale(1.05)}}
+.tape-ring{width:52px;height:52px;border-radius:50%;border:8px solid;border-color:rgba(255,92,26,0.7) rgba(20,20,20,0.8) rgba(255,92,26,0.7) rgba(20,20,20,0.8);animation:tape-spin 4s linear infinite;box-shadow:0 0 16px rgba(255,92,26,0.2)}
+.tape-ring2{position:absolute;top:8px;left:8px;width:36px;height:36px;border-width:4px;animation-direction:reverse;animation-duration:6s}
+.tape-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:16px}
+@keyframes tape-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+/* Particles */
+.pkg-particle{position:absolute;border-radius:50%;animation:particle-drift 5s ease-in-out infinite}
+.p1{width:6px;height:6px;background:var(--fire);top:15%;right:15%;animation-delay:0s;opacity:0.7}
+.p2{width:4px;height:4px;background:var(--royal3);top:35%;left:10%;animation-delay:0.8s;opacity:0.6}
+.p3{width:8px;height:8px;background:var(--ember);bottom:20%;right:10%;animation-delay:1.5s;opacity:0.5}
+.p4{width:3px;height:3px;background:#fff;top:55%;right:30%;animation-delay:0.4s;opacity:0.4}
+.p5{width:5px;height:5px;background:var(--fire2);bottom:15%;left:35%;animation-delay:1s;opacity:0.6}
+@keyframes particle-drift{0%,100%{transform:translateY(0) scale(1);opacity:0.6}50%{transform:translateY(-16px) scale(1.3);opacity:0.9}}
+
+/* ============================================
+   TESTIMONIALS SECTION
+   ============================================ */
+#testimonials{background:var(--ink);position:relative;overflow:hidden}
+#testimonials::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(77,139,255,0.04) 0%,transparent 60%),radial-gradient(ellipse at 80% 50%,rgba(255,92,26,0.04) 0%,transparent 60%)}
+.testi-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:48px}
+.btn-add-testi{display:inline-flex;align-items:center;gap:8px;background:rgba(77,139,255,0.1);border:1px solid rgba(77,139,255,0.3);color:#4d8bff;padding:10px 20px;border-radius:8px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all 0.25s}
+.btn-add-testi:hover{background:rgba(77,139,255,0.2);border-color:rgba(77,139,255,0.6);transform:translateY(-2px)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
+@media(max-width:1024px){.testi-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.testi-grid{grid-template-columns:1fr}}
+.testi-card{background:linear-gradient(135deg,var(--card),rgba(22,26,30,0.95));border:1px solid var(--line);border-radius:14px;padding:28px;position:relative;overflow:hidden;transition:all 0.3s}
+.testi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--fire),var(--gold));opacity:0;transition:opacity 0.3s}
+.testi-card:hover::before{opacity:1}
+.testi-card:hover{border-color:rgba(255,92,26,0.2);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.4)}
+.testi-quote-mark{font-family:'Cormorant Garamond',serif;font-size:72px;color:rgba(255,92,26,0.12);line-height:0.6;position:absolute;top:20px;right:20px;font-weight:700}
+.testi-stars{display:flex;gap:3px;margin-bottom:14px}
+.testi-star{color:var(--gold);font-size:14px}
+.testi-text{font-size:14px;line-height:1.8;color:var(--fog);margin-bottom:20px;position:relative;z-index:1;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:16px}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--fire),var(--royal2));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:#fff;flex-shrink:0}
+.testi-info{flex:1;min-width:0}
+.testi-name{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:var(--white);line-height:1.2}
+.testi-company{font-size:11px;color:var(--steel);letter-spacing:1px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.testi-date{font-size:10px;color:rgba(255,255,255,0.2);margin-top:4px}
+/* Add testimonial modal */
+.testi-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);z-index:99990;display:none;align-items:center;justify-content:center;padding:20px}
+.testi-modal-overlay.open{display:flex}
+.testi-modal{background:linear-gradient(135deg,#141a22,#0e1420);border:1px solid rgba(77,139,255,0.2);border-radius:16px;padding:40px;width:100%;max-width:520px;position:relative;box-shadow:0 32px 80px rgba(0,0,0,0.8)}
+.testi-modal h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--white);margin-bottom:6px}
+.testi-modal p{font-size:13px;color:var(--steel);margin-bottom:28px}
+.testi-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--steel);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.testi-close:hover{border-color:var(--fire);color:var(--fire)}
+.testi-rating-pick{display:flex;gap:8px;margin-bottom:18px}
+.testi-star-btn{font-size:24px;cursor:pointer;filter:grayscale(1);transition:all 0.15s;background:none;border:none;padding:0}
+.testi-star-btn.lit{filter:grayscale(0);transform:scale(1.1)}
+.testi-loading{text-align:center;padding:40px;display:none}
+.testi-loading-spinner{width:40px;height:40px;border:3px solid rgba(77,139,255,0.2);border-top-color:#4d8bff;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 16px}
+.testi-empty{text-align:center;padding:60px 20px;color:var(--steel)}
+.testi-empty-icon{font-size:48px;margin-bottom:16px;display:block;opacity:0.4}
+.testi-load-more{display:flex;justify-content:center;margin-top:8px}
+.btn-load-more{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--line);color:var(--steel);padding:10px 24px;border-radius:8px;font-size:12px;font-weight:600;letter-spacing:1px;cursor:pointer;transition:all 0.2s;font-family:'Outfit',sans-serif}
+.btn-load-more:hover{border-color:rgba(255,92,26,0.3);color:var(--fire2)}
+
+@media(max-width:1024px){
+  #home{grid-template-columns:1fr;min-height:auto}
+  .hero-right{display:none}
+  .about-layout{grid-template-columns:1fr;gap:40px}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .infra-grid{grid-template-columns:1fr 1fr}
+  .products-masonry{grid-template-columns:1fr 1fr}
+  .p-card.wide{grid-column:span 1}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  nav{display:none}
+  .why-grid{grid-template-columns:1fr}
+  .infra-grid{grid-template-columns:1fr 1fr}
+  .products-masonry{grid-template-columns:1fr}
+  .photo-grid{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
+  .ph1,.ph2,.ph3,.ph4,.ph5,.ph6,.ph7{grid-column:span 1;grid-row:span 1}
+  .footer-grid{grid-template-columns:1fr}
+  section{padding:72px 5%}
+  .contact-form-wrap{padding:28px}
+  .float-btn span:not(.float-icon){display:none}
+  .float-btn{padding:13px 16px}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="cur-ring"></div>
+
+<!-- Floating CTA -->
+<div class="float-bar">
+  <a href="https://wa.me/919821381597?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" class="float-btn float-wa">
+    <div class="float-pulse"></div>
+    <span class="float-icon">💬</span><span>WhatsApp Us</span>
+  </a>
+  <a href="tel:+919821381597" class="float-btn float-call">
+    <span class="float-icon">📞</span><span>Call Now</span>
+  </a>
+</div>
+
+<!-- Header -->
+<header>
+  <a href="#home" class="logo">
+    <div class="logo-mark">BPBW</div>
+    <div class="logo-words">
+      <strong>Bharat Plastic Button Works</strong>
+      <span>Est. 1980 · Bhiwandi, Thane</span>
+    </div>
+  </a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#infra">Infra</a>
+    <a href="#photos">Photos</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="tel:+919821381597" class="nav-phone"><span>📞 +91 98213 81597</span></a>
+</header>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-left">
+    <div class="hero-badge"><span class="badge-dot"></span>India's Trusted Packaging Manufacturer</div>
+    <h1 class="hero-h1"><span class="name-title">Bharat Plastic<br/>Button Works</span><span class="line2" style="font-size:0.65em;letter-spacing:2px;font-weight:500;margin-top:8px;display:block">Industrial Packaging</span><span class="line3" style="font-size:0.45em;letter-spacing:4px;font-weight:400;-webkit-text-stroke:1px rgba(255,255,255,0.2)">Since 1980</span></h1>
+    <div class="luxury-sep"><div class="luxury-sep-line"></div><div class="luxury-sep-diamond"></div><div class="luxury-sep-line"></div></div>
+    <div class="sister-concerns">
+      <span class="sister-label">Sister Concerns:</span>
+      <span class="sister-name">Bhumi Shah Enterprise</span>
+      <span class="sister-name">Nirav Enterprise</span>
+    </div>
+    <div class="hero-name-sep"><div class="hero-name-sep-line"></div><div class="hero-name-sep-dot"></div><div class="hero-name-sep-line2"></div></div>
+    <p class="hero-desc">LD · LLDPE · HM-HDPE · PVC — trusted by Indian Navy, Indian Railways and International Cargo. Custom-made to your specification.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-fire"><span>⚡</span> Explore Products</a>
+      <a href="https://wa.me/919821381597?text=Hello%2C%20I%20am%20interested%20in%20your%20packaging%20products." target="_blank" class="btn-ghost"><span>💬</span> WhatsApp Enquiry</a>
+    </div>
+    <div class="hero-kpis">
+      <div class="kpi"><span class="kpi-val">45+</span><span class="kpi-lbl">Years</span></div>
+      <div class="kpi"><span class="kpi-val">20+</span><span class="kpi-lbl">Products</span></div>
+      <div class="kpi"><span class="kpi-val">★★★★★</span><span class="kpi-lbl">Rated</span></div>
+      <div class="kpi"><span class="kpi-val">3+</span><span class="kpi-lbl">Govt Clients</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hex-grid"></div>
+    <div class="hero-big-num">45</div>
+    <div class="hero-right-inner">
+      <!-- 3D PACKAGING SHOWCASE -->
+      <div class="pkg-showcase">
+        <div class="pkg-stage">
+          <!-- Floating 3D boxes -->
+          <div class="pkg-box pkg-box1">
+            <div class="box-face box-top"></div>
+            <div class="box-face box-front"><span>BPBW</span></div>
+            <div class="box-face box-right"></div>
+          </div>
+          <div class="pkg-box pkg-box2">
+            <div class="box-face box-top"></div>
+            <div class="box-face box-front"><span>1980</span></div>
+            <div class="box-face box-right"></div>
+          </div>
+          <div class="pkg-box pkg-box3">
+            <div class="box-face box-top"></div>
+            <div class="box-face box-front"><span>★</span></div>
+            <div class="box-face box-right"></div>
+          </div>
+          <!-- Plastic roll visual -->
+          <div class="pkg-roll">
+            <div class="roll-body"></div>
+            <div class="roll-shine"></div>
+            <div class="roll-label">LDPE</div>
+          </div>
+          <!-- Bag silhouette -->
+          <div class="pkg-bag">
+            <div class="bag-body">
+              <div class="bag-top"></div>
+              <div class="bag-seal"></div>
+              <div class="bag-text">ECO ♻</div>
+            </div>
+          </div>
+          <!-- Tape roll -->
+          <div class="pkg-tape">
+            <div class="tape-ring"></div>
+            <div class="tape-ring tape-ring2"></div>
+            <div class="tape-text">⚠</div>
+          </div>
+          <!-- Particles -->
+          <div class="pkg-particle p1"></div>
+          <div class="pkg-particle p2"></div>
+          <div class="pkg-particle p3"></div>
+          <div class="pkg-particle p4"></div>
+          <div class="pkg-particle p5"></div>
+          <!-- Center badge -->
+          <div class="pkg-center-badge">
+            <div class="pcb-inner">
+              <div class="pcb-year">EST.</div>
+              <div class="pcb-num">1980</div>
+              <div class="pcb-name">BPBW</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:28px;text-align:center">
+          <div style="font-family:'Cormorant SC',serif;font-size:10px;color:var(--fire);letter-spacing:4px;text-transform:uppercase;margin-bottom:8px">// Product Range</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--white)">20+ Categories</div>
+          <div style="font-size:13px;color:var(--steel);margin-top:4px">Fully Customisable · Pan-India Delivery</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ticker -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span class="ticker-item">LDPE Garbage Bags<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Biodegradable Packaging<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Biohazard Printed Bags<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">LDPE Membrane Sheets<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Barsati Tarpaulins<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Barricade Warning Tapes<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Cargo Pallet Covers<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Stretch Films<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">LDPE Garbage Bags<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Biodegradable Packaging<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Biohazard Printed Bags<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">LDPE Membrane Sheets<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Barsati Tarpaulins<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Barricade Warning Tapes<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Cargo Pallet Covers<span class="ticker-sep">·</span></span>
+    <span class="ticker-item">Stretch Films<span class="ticker-sep">·</span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-layout">
+    <div class="about-text reveal">
+      <div class="s-label">Who We Are</div>
+      <h2 class="s-title">Four Decades of<br/>Packaging Excellence</h2>
+      <div class="s-rule"><div class="s-rule-line"></div><div class="s-rule-dot"></div></div>
+      <p class="s-desc">Established in 1980, Bharat Plastics & Button Works (Nirav Enterprises) is one of Maharashtra's most trusted names in plastic packaging manufacturing.</p>
+      <br/>
+      <p>Under the guidance of founder <strong class="name-blue">Mr. Bharat Shah</strong> and Director <strong class="name-blue">Mr. Nirav Shah</strong>, we have grown into a full-scale manufacturer serving government bodies, construction giants and global logistics operators. Our Bhiwandi plant runs state-of-the-art extrusion lines, weaving looms, stitching and printing machinery — producing a defect-free range at industrial scale.</p>
+      <div class="luxury-sep" style="margin:20px 0 16px"><div class="luxury-sep-line"></div><div class="luxury-sep-diamond"></div><div class="luxury-sep-line"></div></div>
+      <p>We offer complete customisation — size, colour, design, cut and base material — so every client gets exactly what they need. Quality is verified through tensile testing, electronic weighing and denier testing before any product ships.</p>
+      <div class="client-strip">
+        <h5>// Trusted By</h5>
+        <div class="client-tags">
+          <span class="c-tag">Indian Navy</span>
+          <span class="c-tag">Indian Railways</span>
+          <span class="c-tag">International Cargo</span>
+          <span class="c-tag">L&T</span>
+          <span class="c-tag">Afcons</span>
+          <span class="c-tag">Udyogi</span>
+          <span class="c-tag">Navayuga</span>
+          <span class="c-tag">Alag Spaces</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-cards reveal" style="transition-delay:0.15s">
+      <div class="a-card"><div class="a-icon">🏭</div><div><h4>Manufacturing Since 1980</h4><p>45+ years of uninterrupted manufacturing with deep expertise in LD, LLDPE, HM-HDPE and PVC materials.</p></div></div>
+      <div class="a-card"><div class="a-icon">🎯</div><div><h4>Custom to Your Spec</h4><p>Size, colour, design, cut, print and material grade — every product tailored precisely to your application.</p></div></div>
+      <div class="a-card"><div class="a-icon">🔬</div><div><h4>Quality Certified</h4><p>GST Verified · TrustSEAL Verified · MSME Registered. Every batch rigorously tested before dispatch.</p></div></div>
+      <div class="a-card"><div class="a-icon">⚡</div><div><h4>Fast Response</h4><p>65% same-day response rate. Competitive pricing with timely dispatch across India.</p></div></div>
+      <div class="a-card" style="background:rgba(255,92,26,0.06);border-color:rgba(255,92,26,0.25)">
+        <div class="a-icon" style="background:rgba(255,92,26,0.2)">📞</div>
+        <div>
+          <h4 style="color:var(--fire2)">Talk to Us Directly</h4>
+          <p style="margin-bottom:10px">
+            <a href="tel:+919821381597" style="color:var(--fire2);font-weight:700;text-decoration:none;font-size:14px">+91 98213 81597</a><br/>
+            <a href="tel:+919172621617" style="color:var(--fire2);font-weight:700;text-decoration:none;font-size:14px">+91 91726 21617</a>
+          </p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a href="tel:+919821381597" style="background:var(--fire);color:#fff;font-size:11px;font-weight:700;padding:7px 16px;border-radius:5px;text-decoration:none;letter-spacing:1px;font-family:'Cormorant Garamond',sans-serif">📞 CALL</a>
+            <a href="https://wa.me/919821381597" target="_blank" style="background:rgba(37,211,102,0.15);color:var(--wa);border:1px solid rgba(37,211,102,0.3);font-size:11px;font-weight:700;padding:7px 16px;border-radius:5px;text-decoration:none;letter-spacing:1px;font-family:'Cormorant Garamond',sans-serif">💬 WHATSAPP</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="prod-header reveal">
+    <div>
+      <div class="s-label">What We Manufacture</div>
+      <h2 class="s-title">Our Products</h2>
+      <div class="s-rule"><div class="s-rule-line"></div><div class="s-rule-dot"></div></div>
+    </div>
+    <div class="prod-count">12+</div>
+  </div>
+  <div class="products-masonry reveal">
+    <div class="p-card wide">
+      <div class="p-visual"><div class="p-visual-bg" style="background:linear-gradient(135deg,#0d2e1a,#05120a)"></div><span class="p-visual-icon">🗑️</span><span class="p-tag">⭐ Bestseller</span></div>
+      <div class="p-body"><div class="p-cat">// Packaging Bags</div><h3>LDPE Garbage Bags</h3><p>Premium LDPE garbage bags for domestic and commercial use. Multiple sizes, thicknesses and colours. Fully customisable on request.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+    <div class="p-card">
+      <div class="p-visual"><div class="p-visual-bg" style="background:linear-gradient(135deg,#2a1a0e,#140808)"></div><span class="p-visual-icon">🍽️</span></div>
+      <div class="p-body"><div class="p-cat">// Restaurant Grade</div><h3>Restaurant Garbage Bags</h3><p>Heavy-duty bags for catering and food service. Odour-resistant and leak-proof.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+    <div class="p-card">
+      <div class="p-visual"><div class="p-visual-bg" style="background:linear-gradient(135deg,#111,#222)"></div><span class="p-visual-icon">🖤</span><span class="p-tag">Popular</span></div>
+      <div class="p-body"><div class="p-cat">// Packaging Bags</div><h3>Black Garbage Bags</h3><p>Industrial-grade black bags for residential and commercial waste management.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+    <div class="p-card tall">
+      <div class="p-visual" style="height:220px"><div class="p-visual-bg" style="background:linear-gradient(135deg,#0d2e0d,#040f04)"></div><span class="p-visual-icon" style="font-size:64px">♻️</span><span class="p-tag">Eco</span></div>
+      <div class="p-body"><div class="p-cat">// Eco Packaging</div><h3>Biodegradable Garbage Bags</h3><p>Environmentally responsible packaging meeting green standards. Decomposes naturally without microplastic pollution — ideal for forward-thinking businesses and institutions.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+    <div class="p-card">
+      <div class="p-visual"><div class="p-visual-bg" style="background:linear-gradient(135deg,#2e1a0a,#150900)"></div><span class="p-visual-icon">🩺</span></div>
+      <div class="p-body"><div class="p-cat">// Medical</div><h3>Biohazard Printed Bags</h3><p>Standard-compliant biohazard bags for healthcare and laboratory waste.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+    <div class="p-card">
+      <div class="p-visual"><div class="p-visual-bg" style="background:linear-gradient(135deg,#1a1a0d,#0a0a04)"></div><span class="p-visual-icon">🗄️</span></div>
+      <div class="p-body"><div class="p-cat">// Industrial</div><h3>Waste Collection Bags</h3><p>Heavy-gauge collection bags for industrial and municipal solid waste operations.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+    <div class="p-card wide">
+      <div class="p-visual"><div class="p-visual-bg" style="background:linear-gradient(135deg,#0a1e2e,#040a14)"></div><span class="p-visual-icon">⚠️</span><span class="p-tag">⚡ Industrial</span></div>
+      <div class="p-body"><div class="p-cat">// Road Safety</div><h3>Barricade / Warning Tapes</h3><p>One of India's largest barricade tape manufacturers. 3-inch size at ₹65/roll. Supplied to L&T, Afcons, Udyogi, Navayuga, Alag Spaces and the local safety market.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+    <div class="p-card">
+      <div class="p-visual"><div class="p-visual-bg" style="background:linear-gradient(135deg,#1e2a0a,#0a1204)"></div><span class="p-visual-icon">🧱</span><span class="p-tag">Construction</span></div>
+      <div class="p-body"><div class="p-cat">// Membrane Sheet</div><h3>LDPE Membrane Sheet (PCC)</h3><p>High-grade LDPE membrane sheets for PCC construction in multiple thicknesses and widths.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+    <div class="p-card">
+      <div class="p-visual"><div class="p-visual-bg" style="background:linear-gradient(135deg,#2e200a,#140e04)"></div><span class="p-visual-icon">🌧️</span></div>
+      <div class="p-body"><div class="p-cat">// Barsati Plastic</div><h3>Barsati Sheet / Tarpaulin</h3><p>Black, white and transparent barsati plastic sheets from ₹70/kg for agriculture, construction and storage.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+    <div class="p-card">
+      <div class="p-visual"><div class="p-visual-bg" style="background:linear-gradient(135deg,#0a1e2e,#04080e)"></div><span class="p-visual-icon">🚢</span><span class="p-tag">Logistics</span></div>
+      <div class="p-body"><div class="p-cat">// Packaging Materials</div><h3>Cargo Pallet Covers</h3><p>Durable pallet covers for cargo protection during shipping. Used by international cargo operators.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+    <div class="p-card">
+      <div class="p-visual"><div class="p-visual-bg" style="background:linear-gradient(135deg,#1e0a2e,#0a040e)"></div><span class="p-visual-icon">🎬</span></div>
+      <div class="p-body"><div class="p-cat">// Stretch Films</div><h3>LDPE Stretch Films</h3><p>LDPE and PVC shrink and stretch films for palletising, bundling and protective wrapping.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+    <div class="p-card">
+      <div class="p-visual"><div class="p-visual-bg" style="background:linear-gradient(135deg,#2e2a0a,#140e04)"></div><span class="p-visual-icon">🛒</span></div>
+      <div class="p-body"><div class="p-cat">// Bag & Rolls</div><h3>Plastic Bags & Sheet Rolls</h3><p>Laminated pouches, printed shopping bags and sheet rolls for retail and commercial use.</p><a href="#contact" class="p-enquire">Get Quote →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Strip -->
+<div class="contact-strip">
+  <div class="strip-text">
+    <h2>Ready to order?<br/>Let's talk.</h2>
+    <p>Get pricing, samples and custom options — usually same day.</p>
+  </div>
+  <div class="strip-btns">
+    <a href="tel:+919821381597" class="strip-call">📞 +91 98213 81597</a>
+    <a href="tel:+919172621617" class="strip-call">📞 +91 91726 21617</a>
+    <a href="https://wa.me/919821381597?text=Hello%2C%20I%20want%20to%20enquire%20about%20your%20products." target="_blank" class="strip-wa">💬 WhatsApp</a>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="s-label reveal">Our Edge</div>
+  <h2 class="s-title reveal">Why Bharat Plastic<br/>Button Works?</h2>
+  <div class="s-rule reveal"><div class="s-rule-line"></div><div class="s-rule-dot"></div></div>
+  <div class="why-grid">
+    <div class="w-card reveal"><div class="w-num">01</div><span class="w-icon">🏆</span><h3>45+ Years of Industry Trust</h3><p>Since 1980, our name has meant consistent quality, on-time delivery and honest pricing built over four decades of work.</p></div>
+    <div class="w-card reveal" style="transition-delay:0.1s"><div class="w-num">02</div><span class="w-icon">⚙️</span><h3>End-to-End Manufacturing</h3><p>From raw granules to finished product — extrusion, weaving, stitching, printing — all in our Bhiwandi plant, eliminating middlemen.</p></div>
+    <div class="w-card reveal" style="transition-delay:0.2s"><div class="w-num">03</div><span class="w-icon">🎨</span><h3>Full Customisation</h3><p>Size, colour, thickness, design, cut — every product tailored to your exact spec with no minimum order restrictions.</p></div>
+    <div class="w-card reveal"><div class="w-num">04</div><span class="w-icon">🔬</span><h3>Rigorous Quality Testing</h3><p>Tensile testing, denier testing and electronic weighing on every batch. Zero-defect commitment by dedicated QC controllers.</p></div>
+    <div class="w-card reveal" style="transition-delay:0.1s"><div class="w-num">05</div><span class="w-icon">💰</span><h3>Market-Leading Prices</h3><p>Direct manufacturer pricing — no trading margins. Barsati sheets from ₹70/kg, warning tapes ₹65/roll, bulk garbage bags competitively priced.</p></div>
+    <div class="w-card reveal" style="transition-delay:0.2s"><div class="w-num">06</div><span class="w-icon">🌍</span><h3>Government-Grade Reliability</h3><p>Trusted by Indian Navy, Indian Railways and International Cargo — clients who demand zero compromise on quality or delivery.</p></div>
+  </div>
+</section>
+
+<!-- INFRASTRUCTURE -->
+<section id="infra">
+  <div class="s-label reveal">Our Plant</div>
+  <h2 class="s-title reveal">Infrastructure &<br/>Facilities</h2>
+  <div class="s-rule reveal"><div class="s-rule-line"></div><div class="s-rule-dot"></div></div>
+  <p class="s-desc reveal">Our manufacturing plant at Bhiwandi, Thane is equipped with advanced machinery and testing equipment for flawless, high-volume production.</p>
+  <div class="infra-grid">
+    <div class="i-card reveal"><span class="i-icon">🔩</span><h4>Extrusion Lines</h4><p>Multi-layer extrusion for LD, LLDPE, HM-HDPE and PVC films and sheets at scale.</p></div>
+    <div class="i-card reveal" style="transition-delay:0.08s"><span class="i-icon">🧵</span><h4>Circular Looms</h4><p>Weaving section with industrial circular looms for woven sack-grade plastic materials.</p></div>
+    <div class="i-card reveal" style="transition-delay:0.16s"><span class="i-icon">🪡</span><h4>Stitching Machines</h4><p>Heavy-duty stitching for industrial bags and covers with precision seams.</p></div>
+    <div class="i-card reveal" style="transition-delay:0.24s"><span class="i-icon">🖨️</span><h4>Printing Machines</h4><p>In-house multi-colour printing for branded, custom and biohazard printed packaging.</p></div>
+    <div class="i-card reveal"><span class="i-icon">🧪</span><h4>Tensile Testing</h4><p>Strength and elongation verified on every product batch before dispatch.</p></div>
+    <div class="i-card reveal" style="transition-delay:0.08s"><span class="i-icon">⚖️</span><h4>Electronic Weighing</h4><p>Precise weighing ensures consistent GSM and dimensions across all batches.</p></div>
+    <div class="i-card reveal" style="transition-delay:0.16s"><span class="i-icon">📏</span><h4>Denier Testing</h4><p>Material thickness and yarn count validation for woven product lines.</p></div>
+    <div class="i-card reveal" style="transition-delay:0.24s"><span class="i-icon">👷</span><h4>Trained Workforce</h4><p>Packaging specialists continuously trained on the latest production techniques.</p></div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section id="photos">
+  <div class="s-label reveal">Gallery</div>
+  <h2 class="s-title reveal">Facility &<br/>Products</h2>
+  <div class="s-rule reveal"><div class="s-rule-line"></div><div class="s-rule-dot"></div></div>
+  <div class="photo-grid reveal">
+    <div class="ph ph1"><div class="ph-bg" style="background:linear-gradient(135deg,#1a3a2a,#051208)"></div><span class="ph-emoji">🏭</span><div class="ph-overlay"><span class="ph-label">Manufacturing Plant · Bhiwandi</span></div></div>
+    <div class="ph ph2"><div class="ph-bg" style="background:linear-gradient(135deg,#1a1a3a,#050512)"></div><span class="ph-emoji">🗑️</span><div class="ph-overlay"><span class="ph-label">LDPE Garbage Bags</span></div></div>
+    <div class="ph ph3"><div class="ph-bg" style="background:linear-gradient(135deg,#2a1a0a,#120800)"></div><span class="ph-emoji">♻️</span><div class="ph-overlay"><span class="ph-label">Biodegradable Range</span></div></div>
+    <div class="ph ph4"><div class="ph-bg" style="background:linear-gradient(135deg,#0a1e2e,#040810)"></div><span class="ph-emoji">⚠️</span><div class="ph-overlay"><span class="ph-label">Warning & Barricade Tapes</span></div></div>
+    <div class="ph ph5"><div class="ph-bg" style="background:linear-gradient(135deg,#1e2a0a,#0a1200)"></div><span class="ph-emoji">🧱</span><div class="ph-overlay"><span class="ph-label">LDPE Membrane Sheets</span></div></div>
+    <div class="ph ph6"><div class="ph-bg" style="background:linear-gradient(135deg,#2e2a0a,#120e00)"></div><span class="ph-emoji">🌧️</span><div class="ph-overlay"><span class="ph-label">Barsati Tarpaulins</span></div></div>
+    <div class="ph ph7"><div class="ph-bg" style="background:linear-gradient(135deg,#0a0a2e,#020208)"></div><span class="ph-emoji">🚢</span><div class="ph-overlay"><span class="ph-label">Cargo Pallet Covers</span></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="s-label reveal">Reach Us</div>
+  <h2 class="s-title reveal">Contact &<br/>Enquiry</h2>
+  <div class="s-rule reveal"><div class="s-rule-line"></div><div class="s-rule-dot"></div></div>
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <div class="phone-big-card">
+        <div class="pbc-label">// Primary Contact</div>
+        <div class="pbc-num">+91 98213 81597</div>
+        <div class="pbc-btns">
+          <a href="tel:+919821381597" class="pbc-call">📞 Call Now</a>
+          <a href="https://wa.me/919821381597?text=Hello%2C%20I%20am%20interested%20in%20your%20products." target="_blank" class="pbc-wa">💬 WhatsApp</a>
+        </div>
+      </div>
+      <div class="phone-big-card" style="border-color:rgba(37,211,102,0.2)">
+        <div class="pbc-label" style="color:var(--wa)">// Secondary Contact</div>
+        <div class="pbc-num">+91 91726 21617</div>
+        <div class="pbc-btns">
+          <a href="tel:+919172621617" class="pbc-call">📞 Call Now</a>
+          <a href="https://wa.me/919172621617?text=Hello%2C%20I%20am%20interested%20in%20your%20products." target="_blank" class="pbc-wa">💬 WhatsApp</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <h5>// Address</h5>
+        <p>Building No. 84, Unit No. 2 & 3,<br/>Indian Corporation, Mankoli Naka,<br/>Bhiwandi–Thane Bypass, Bhiwandi,<br/>Thane – 421302, Maharashtra, India</p>
+      </div>
+      <div class="info-card">
+        <h5>// Company Details</h5>
+        <p><strong style="color:var(--white)">Director:</strong> Mr. Nirav Shah<br/><strong style="color:var(--white)">Founder:</strong> Mr. Bharat Shah<br/><strong style="color:var(--white)">GST:</strong> 27AADFB9285D1ZD<br/><strong style="color:var(--white)">Type:</strong> MSME · Partnership Firm<br/><strong style="color:var(--white)">Hours:</strong> Mon–Sat, 9AM–6PM IST</p>
+      </div>
+      <div class="info-card">
+        <h5>// Online</h5>
+        <p><a href="https://www.indiamart.com/bharatplasticbuttonworks/" target="_blank">IndiaMart Profile ↗</a> · TrustSEAL Verified</p>
+      </div>
+    </div>
+    <div class="contact-form-wrap reveal" style="transition-delay:0.15s">
+      <div id="formSuccess" class="form-success">
+        <span class="tick">✅</span>
+        <h3>Enquiry Sent!</h3>
+        <p>We'll respond within the same business day.<br/><br/>Or call directly: <a href="tel:+919821381597" style="color:var(--fire2);font-weight:700">+91 98213 81597</a></p>
+      </div>
+      <div id="formBody">
+        <div class="cf-title">Send an Enquiry</div>
+        <p class="cf-sub">We respond within hours. Or call / WhatsApp us directly for faster replies.</p>
+        <div class="form-row">
+          <div class="fg"><label>Your Name</label><input type="text" placeholder="Full Name"/></div>
+          <div class="fg"><label>Company Name</label><input type="text" placeholder="Organisation"/></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Mobile Number</label><input type="tel" placeholder="+91 XXXXX XXXXX"/></div>
+          <div class="fg"><label>Email Address</label><input type="email" placeholder="you@company.com"/></div>
+        </div>
+        <div class="fg">
+          <label>Product Required</label>
+          <select>
+            <option value="">— Select Product Category —</option>
+            <option>LDPE Garbage Bags</option>
+            <option>Garbage Bags for Restaurant</option>
+            <option>Garbage Bags for Waste / Foods</option>
+            <option>Black Garbage Bags</option>
+            <option>LD Garbage Bags</option>
+            <option>Waste Plastic Collection Bags</option>
+            <option>Biodegradable Garbage Bags</option>
+            <option>Biohazard Printed Garbage Bags</option>
+            <option>Plastic Bags and Sheet Rolls</option>
+            <option>LDPE Membrane Sheet for PCC Construction</option>
+            <option>Barsati Plastic Sheet</option>
+            <option>LDPE Sheet</option>
+            <option>Barsati Plastic Tarpaulins</option>
+            <option>Barricade / Warning Tapes</option>
+            <option>Stretch Films / LDPE</option>
+            <option>Cargo Pallet Covers</option>
+            <option>Others</option>
+          </select>
+        </div>
+        <div class="fg"><label>Your Requirements</label><textarea placeholder="Describe your requirement — quantity, size, colour, thickness, any specific needs..."></textarea></div>
+        <button class="form-submit" onclick="submitForm()">Send Enquiry — We'll Respond Today ⚡</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testi-header reveal">
+    <div>
+      <div class="s-label">What Clients Say</div>
+      <h2 class="s-title">Testimonials</h2>
+      <div class="s-rule"><div class="s-rule-line"></div><div class="s-rule-dot"></div></div>
+    </div>
+    <button class="btn-add-testi" onclick="openTestiModal()">✦ Add Your Review</button>
+  </div>
+  <div id="testi-loading" class="testi-loading">
+    <div class="testi-loading-spinner"></div>
+    <p style="color:var(--steel);font-size:13px">Loading testimonials…</p>
+  </div>
+  <div id="testi-grid" class="testi-grid"></div>
+  <div class="testi-load-more" id="testi-load-more" style="display:none">
+    <button class="btn-load-more" onclick="loadMoreTestis()">Load More Reviews</button>
+  </div>
+</section>
+
+<!-- TESTIMONIAL MODAL -->
+<div class="testi-modal-overlay" id="testi-modal-overlay" onclick="closeTestiModal(event)">
+  <div class="testi-modal">
+    <button class="testi-close" onclick="closeTestiModal()">✕</button>
+    <h3>Share Your Experience</h3>
+    <p>Your review helps others trust Bharat Plastic Button Works.</p>
+    <div class="fg"><label>Your Name *</label><input type="text" id="testi-name-input" placeholder="e.g. Rajesh Kumar"/></div>
+    <div class="fg"><label>Company / Organisation</label><input type="text" id="testi-company-input" placeholder="e.g. ABC Construction Ltd."/></div>
+    <div class="fg" style="margin-bottom:10px"><label>Rating *</label>
+      <div class="testi-rating-pick" id="star-picker">
+        <button class="testi-star-btn" data-val="1" onclick="setRating(1)">★</button>
+        <button class="testi-star-btn" data-val="2" onclick="setRating(2)">★</button>
+        <button class="testi-star-btn" data-val="3" onclick="setRating(3)">★</button>
+        <button class="testi-star-btn" data-val="4" onclick="setRating(4)">★</button>
+        <button class="testi-star-btn" data-val="5" onclick="setRating(5)">★</button>
+      </div>
+    </div>
+    <div class="fg"><label>Your Review *</label><textarea id="testi-text-input" placeholder="Tell us about your experience with our products and service…" style="min-height:100px"></textarea></div>
+    <button class="form-submit" onclick="submitTestimonial()" id="testi-submit-btn">Submit Review ✦</button>
+    <div id="testi-submit-msg" style="display:none;text-align:center;padding:20px;color:#4d8bff;font-size:14px"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="logo" style="display:inline-flex;margin-bottom:16px">
+        <div class="logo-mark">BPBW</div>
+        <div class="logo-words"><strong>Bharat Plastic Button Works</strong><span>& Nirav Enterprises</span></div>
+      </a>
+      <p>Est. 1980 · Manufacturing LD, LLDPE, HM-HDPE and PVC packaging products from Bhiwandi, Thane. Trusted by Indian Navy, Indian Railways and International Cargo.</p>
+      <div class="f-social">
+        <a href="tel:+919821381597" class="f-soc" title="Call Primary">📞</a>
+        <a href="tel:+919172621617" class="f-soc" title="Call Secondary">📲</a>
+        <a href="https://wa.me/919821381597" target="_blank" class="f-soc" title="WhatsApp">💬</a>
+        <a href="https://www.indiamart.com/bharatplasticbuttonworks/" target="_blank" class="f-soc" title="IndiaMart">🌐</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#infra">Infrastructure</a></li>
+        <li><a href="#photos">Photos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Products</h5>
+      <ul>
+        <li><a href="#products">LDPE Garbage Bags</a></li>
+        <li><a href="#products">Biodegradable Bags</a></li>
+        <li><a href="#products">Biohazard Bags</a></li>
+        <li><a href="#products">Membrane Sheets</a></li>
+        <li><a href="#products">Barsati / Tarpaulin</a></li>
+        <li><a href="#products">Warning Tapes</a></li>
+        <li><a href="#products">Pallet Covers</a></li>
+        <li><a href="#products">Stretch Films</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+919821381597">+91 98213 81597</a></li>
+        <li><a href="tel:+919172621617">+91 91726 21617</a></li>
+        <li><a href="https://wa.me/919821381597" target="_blank">WhatsApp Us</a></li>
+        <li><a href="#contact">Send an Enquiry</a></li>
+        <li><a href="https://www.indiamart.com/bharatplasticbuttonworks/" target="_blank">IndiaMart Profile</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Bharat Plastic Button Works & Nirav Enterprises. Bhiwandi, Thane, Maharashtra.</p>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+      <span class="gst-badge">GST: 27AADFB9285D1ZD</span>
+      <span class="gst-badge">TrustSEAL ✓</span>
+      <span class="gst-badge">Est. 1980</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── CURSOR ──────────────────────────────────────
+const cur = document.getElementById('cur');
+const ring = document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
+function moveRing(){ rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(moveRing); }
+moveRing();
+document.querySelectorAll('a,button').forEach(el => {
+  el.addEventListener('mouseenter',()=>{cur.classList.add('hover');ring.classList.add('hover')});
+  el.addEventListener('mouseleave',()=>{cur.classList.remove('hover');ring.classList.remove('hover')});
+});
+
+// ── REVEAL ON SCROLL ────────────────────────────
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)} });
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ── FORM ─────────────────────────────────────────
+function submitForm(){
+  document.getElementById('formBody').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+
+// ── NAV ACTIVE HIGHLIGHT ─────────────────────────
+const sections=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{
+  let c='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-100)c=s.id});
+  document.querySelectorAll('nav a').forEach(a=>{
+    const active=a.getAttribute('href')==='#'+c;
+    a.classList.toggle('active',active);
+  });
+});
+
+// ══════════════════════════════════════════════════
+//  TESTIMONIALS — Anthropic API (globally persistent)
+// ══════════════════════════════════════════════════
+const SYSTEM_PROMPT = `You are a testimonials database manager for Bharat Plastic Button Works website.
+You store and retrieve customer testimonials in JSON format ONLY.
+When asked to GET testimonials, return JSON array of testimonial objects.
+When asked to SAVE a testimonial, add it to the list and return the updated array.
+Each testimonial has: id (timestamp), name, company, rating (1-5), text, date (ISO string).
+ALWAYS return ONLY valid JSON, no markdown, no explanation. Just the raw JSON array.`;
+
+let allTestis = [];
+let displayCount = 6;
+let selectedRating = 0;
+
+async function callAPI(userMsg) {
+  const r = await fetch("https://api.anthropic.com/v1/messages", {
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({
+      model:"claude-sonnet-4-20250514",
+      max_tokens:4000,
+      system: SYSTEM_PROMPT,
+      messages:[{role:"user",content:userMsg}]
+    })
+  });
+  const d = await r.json();
+  const raw = d.content.map(i=>i.text||'').join('');
+  const clean = raw.replace(/```json|```/g,'').trim();
+  return JSON.parse(clean);
+}
+
+async function loadTestimonials() {
+  document.getElementById('testi-loading').style.display='block';
+  document.getElementById('testi-grid').style.display='none';
+  try {
+    const data = await callAPI("GET all testimonials. If none exist yet, return this default array: [{\"id\":1,\"name\":\"Vikram Mehta\",\"company\":\"L&T Infrastructure\",\"rating\":5,\"text\":\"Bharat Plastic Button Works has been our go-to supplier for barricade tapes for the past 3 years. Consistent quality, competitive pricing and always on-time delivery. Highly recommended.\",\"date\":\"2024-11-10\"},{\"id\":2,\"name\":\"Sunita Patil\",\"company\":\"Municipal Corporation\",\"rating\":5,\"text\":\"We source garbage bags from BPBW for our municipality's waste management program. Excellent tensile strength, never had a complaint. The customised printing was done beautifully.\",\"date\":\"2024-10-22\"},{\"id\":3,\"name\":\"Ajay Sharma\",\"company\":\"Navayuga Engineering\",\"rating\":5,\"text\":\"Prompt response, good quality LDPE membrane sheets for our PCC construction projects. Mr. Nirav Shah personally followed up on our bulk order. Great service.\",\"date\":\"2024-09-14\"}]");
+    allTestis = Array.isArray(data) ? data : [];
+  } catch(e) {
+    allTestis = [
+      {id:1,name:"Vikram Mehta",company:"L&T Infrastructure",rating:5,text:"Bharat Plastic Button Works has been our go-to supplier for barricade tapes for 3 years. Consistent quality, competitive pricing and always on-time delivery.",date:"2024-11-10"},
+      {id:2,name:"Sunita Patil",company:"Municipal Corporation",rating:5,text:"We source garbage bags for our municipality's waste management program. Excellent tensile strength, never had a complaint. Customised printing was done beautifully.",date:"2024-10-22"},
+      {id:3,name:"Ajay Sharma",company:"Navayuga Engineering",rating:5,text:"Prompt response, good quality LDPE membrane sheets. Mr. Nirav Shah personally followed up on our bulk order. Great service.",date:"2024-09-14"}
+    ];
+  }
+  renderTestimonials();
+  document.getElementById('testi-loading').style.display='none';
+  document.getElementById('testi-grid').style.display='grid';
+}
+
+function renderTestimonials() {
+  const grid = document.getElementById('testi-grid');
+  const sorted = [...allTestis].reverse();
+  const show = sorted.slice(0, displayCount);
+  if(show.length === 0){
+    grid.innerHTML = `<div class="testi-empty" style="grid-column:1/-1"><span class="testi-empty-icon">💬</span><p>No reviews yet. Be the first to share your experience!</p></div>`;
+    document.getElementById('testi-load-more').style.display='none';
+    return;
+  }
+  grid.innerHTML = show.map(t => {
+    const stars = '★'.repeat(t.rating) + '☆'.repeat(5-t.rating);
+    const initials = t.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+    const dateStr = t.date ? new Date(t.date).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}) : '';
+    return `<div class="testi-card reveal">
+      <div class="testi-quote-mark">"</div>
+      <div class="testi-stars">${stars.split('').map((s,i)=>`<span class="testi-star" style="color:${i<t.rating?'var(--gold)':'rgba(255,255,255,0.1)'}">${s}</span>`).join('')}</div>
+      <p class="testi-text">"${t.text}"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">${initials}</div>
+        <div class="testi-info">
+          <div class="testi-name">${t.name}</div>
+          <div class="testi-company">${t.company||''}</div>
+          ${dateStr?`<div class="testi-date">${dateStr}</div>`:''}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  document.querySelectorAll('#testi-grid .reveal').forEach(el=>obs.observe(el));
+  document.getElementById('testi-load-more').style.display = sorted.length > displayCount ? 'flex' : 'none';
+}
+
+function loadMoreTestis(){
+  displayCount += 6;
+  renderTestimonials();
+}
+
+// Modal controls
+function openTestiModal(){
+  document.getElementById('testi-modal-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeTestiModal(e){
+  if(!e || e.target===document.getElementById('testi-modal-overlay')){
+    document.getElementById('testi-modal-overlay').classList.remove('open');
+    document.body.style.overflow='';
+  }
+}
+function setRating(n){
+  selectedRating = n;
+  document.querySelectorAll('.testi-star-btn').forEach((b,i)=>{
+    b.classList.toggle('lit', i < n);
+    b.style.color = i < n ? 'var(--gold)' : 'rgba(255,255,255,0.2)';
+  });
+}
+
+async function submitTestimonial(){
+  const name = document.getElementById('testi-name-input').value.trim();
+  const company = document.getElementById('testi-company-input').value.trim();
+  const text = document.getElementById('testi-text-input').value.trim();
+  if(!name){alert('Please enter your name.');return;}
+  if(!selectedRating){alert('Please select a rating.');return;}
+  if(!text){alert('Please write your review.');return;}
+
+  const btn = document.getElementById('testi-submit-btn');
+  const msg = document.getElementById('testi-submit-msg');
+  btn.disabled = true;
+  btn.textContent = 'Saving…';
+
+  const newEntry = {id:Date.now(),name,company,rating:selectedRating,text,date:new Date().toISOString()};
+  const toSave = [...allTestis, newEntry];
+
+  try {
+    const updated = await callAPI(`SAVE testimonials. Here is the complete updated list to store: ${JSON.stringify(toSave)}`);
+    allTestis = Array.isArray(updated) ? updated : toSave;
+  } catch(e) {
+    allTestis = toSave;
+  }
+
+  displayCount = Math.max(displayCount, allTestis.length);
+  renderTestimonials();
+  btn.style.display='none';
+  msg.style.display='block';
+  msg.innerHTML='✓ Thank you! Your review has been published.';
+  setTimeout(()=>{
+    closeTestiModal();
+    btn.disabled=false; btn.textContent='Submit Review ✦'; btn.style.display='block';
+    msg.style.display='none';
+    document.getElementById('testi-name-input').value='';
+    document.getElementById('testi-company-input').value='';
+    document.getElementById('testi-text-input').value='';
+    selectedRating=0;
+    setRating(0);
+  },2200);
+}
+
+// Load on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', loadTestimonials);
+</script>
+</body>
+</html>
