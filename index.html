@@ -398,24 +398,196 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   .infra-grid{grid-template-columns:1fr 1fr}
   .products-masonry{grid-template-columns:1fr 1fr}
   .p-card.wide{grid-column:span 1}
+  .p-card.tall{grid-row:span 1}
   .contact-grid{grid-template-columns:1fr;gap:40px}
   .footer-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:640px){
+
+/* ── TABLET ───────────────────────────────────── */
+@media(max-width:768px){
   nav{display:none}
-  .why-grid{grid-template-columns:1fr}
-  .infra-grid{grid-template-columns:1fr 1fr}
-  .products-masonry{grid-template-columns:1fr}
-  .photo-grid{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
+  .nav-phone{font-size:11px;padding:6px 12px;letter-spacing:0}
+  header{padding:0 4%}
+  .logo-words strong{font-size:13px}
+  .logo-words span{display:none}
+
+  section{padding:60px 5%}
+  .hero-left{padding:48px 5% 40px}
+  .hero-h1{font-size:clamp(38px,9vw,60px);margin-bottom:18px}
+  .hero-badge{font-size:9px;letter-spacing:2px;padding:5px 10px;margin-bottom:18px}
+  .hero-desc{font-size:14px;margin-bottom:28px}
+  .hero-actions{flex-direction:column;gap:10px;margin-bottom:28px}
+  .btn-fire,.btn-ghost{width:100%;justify-content:center;padding:13px 20px}
+  .hero-kpis{flex-wrap:nowrap}
+  .kpi{padding:12px 6px}
+  .kpi-val{font-size:20px}
+  .kpi-lbl{font-size:9px;letter-spacing:1px}
+
+  .s-title{font-size:clamp(28px,7vw,48px);letter-spacing:-0.5px}
+  .s-desc{font-size:14px}
+  .about-layout{gap:32px}
+  .about-text p{font-size:13px}
+  .a-card{padding:18px 16px;gap:12px}
+  .a-icon{width:40px;height:40px;font-size:18px}
+
+  .products-masonry{grid-template-columns:1fr 1fr;gap:12px}
+  .prod-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
+  .prod-count{font-size:48px}
+  .p-visual{height:110px;font-size:40px}
+  .p-body{padding:14px}
+  .p-body h3{font-size:15px}
+  .p-body p{font-size:12px}
+
+  .why-grid{grid-template-columns:1fr;gap:16px;margin-top:32px}
+  .w-card{padding:24px 20px}
+
+  .infra-grid{grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+  .i-card{padding:20px 14px}
+
+  .contact-strip{padding:40px 5%;flex-direction:column;align-items:flex-start;gap:24px}
+  .strip-text h2{font-size:clamp(22px,6vw,36px)}
+  .strip-btns{flex-direction:column;width:100%;gap:10px}
+  .strip-call,.strip-wa{width:100%;justify-content:center;padding:12px 20px}
+
+  .contact-grid{gap:28px}
+  .contact-form-wrap{padding:24px}
+  .form-row{grid-template-columns:1fr}
+  .pbc-num{font-size:20px}
+  .pbc-btns{flex-direction:row;flex-wrap:wrap}
+
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  footer{padding:40px 5% 28px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:10px}
+
+  .testi-grid{grid-template-columns:1fr;gap:16px}
+  .testi-header{flex-direction:column;align-items:flex-start;gap:14px}
+  .btn-add-testi{width:100%;justify-content:center}
+  .testi-card{padding:20px}
+  .testi-modal{padding:24px 20px}
+
+  .photo-grid{grid-template-columns:1fr 1fr;grid-auto-rows:130px;gap:8px}
   .ph1,.ph2,.ph3,.ph4,.ph5,.ph6,.ph7{grid-column:span 1;grid-row:span 1}
-  .footer-grid{grid-template-columns:1fr}
-  section{padding:72px 5%}
-  .contact-form-wrap{padding:28px}
+
+  .float-bar{bottom:16px;right:16px;gap:8px}
   .float-btn span:not(.float-icon){display:none}
-  .float-btn{padding:13px 16px}
+  .float-btn{padding:12px 14px;border-radius:50%}
+  .float-icon{font-size:20px}
+}
+
+/* ── MOBILE ───────────────────────────────────── */
+@media(max-width:480px){
+  html{font-size:15px}
+  header{height:58px;padding:0 4%}
+  #home{padding-top:58px}
+  .logo-mark{width:36px;height:36px;font-size:10px}
+  .logo-words strong{font-size:12px}
+
+  section{padding:48px 4%}
+  .hero-left{padding:36px 4% 32px}
+  .hero-h1{font-size:clamp(32px,10vw,52px);line-height:0.95}
+  .hero-badge{font-size:8px;padding:4px 8px;letter-spacing:1.5px;margin-bottom:14px}
+  .luxury-sep{margin:8px 0 4px}
+  .sister-concerns{gap:5px}
+  .sister-name{font-size:8px;padding:2px 6px}
+  .hero-name-sep{margin:10px 0 14px}
+  .hero-desc{font-size:13px;line-height:1.7;margin-bottom:22px}
+  .hero-actions{gap:8px;margin-bottom:20px}
+  .btn-fire,.btn-ghost{font-size:12px;padding:12px 16px}
+  .hero-kpis{border-radius:8px}
+  .kpi{padding:10px 4px}
+  .kpi-val{font-size:17px}
+  .kpi-lbl{font-size:8px;letter-spacing:0}
+
+  .s-title{font-size:clamp(26px,8vw,40px)}
+  .s-label{font-size:9px;letter-spacing:3px}
+  .s-rule{margin-bottom:28px}
+
+  .about-layout{gap:24px}
+  .a-card{padding:14px;gap:10px;flex-direction:row;align-items:flex-start}
+  .a-icon{width:36px;height:36px;font-size:16px;flex-shrink:0}
+  .a-card h4{font-size:14px}
+  .a-card p{font-size:12px}
+
+  .products-masonry{grid-template-columns:1fr;gap:10px}
+  .p-card.wide,.p-card.tall{grid-column:span 1;grid-row:span 1}
+  .p-card.wide .p-visual,.p-card.tall .p-visual,.p-visual{height:120px;font-size:44px}
+  .prod-count{font-size:40px}
+
+  .why-grid{margin-top:24px;gap:12px}
+  .w-card{padding:20px 16px}
+  .w-card h3{font-size:16px}
+  .w-num{font-size:40px}
+
+  .infra-grid{grid-template-columns:1fr;gap:10px;margin-top:24px}
+  .i-card{padding:18px 14px;text-align:left;display:flex;align-items:flex-start;gap:14px}
+  .i-icon{font-size:28px;margin-bottom:0;flex-shrink:0}
+
+  .contact-strip{padding:32px 4%}
+  .strip-text h2{font-size:clamp(20px,7vw,30px)}
+  .strip-text p{font-size:13px}
+  .strip-call,.strip-wa{font-size:12px;padding:11px 16px}
+
+  .contact-form-wrap{padding:20px 16px;border-radius:10px}
+  .cf-title{font-size:22px}
+  .phone-big-card{padding:20px 16px}
+  .pbc-num{font-size:18px;letter-spacing:0}
+  .pbc-btns{gap:8px}
+  .pbc-call,.pbc-wa{padding:8px 14px;font-size:11px}
+  .info-card{padding:16px}
+  .info-card p{font-size:13px}
+  .fg input,.fg select,.fg textarea{font-size:13px;padding:11px 12px}
+  .form-submit{font-size:12px;letter-spacing:0.5px;padding:13px}
+
+  footer{padding:32px 4% 20px}
+  .footer-grid{gap:24px}
+  .footer-col h5{font-size:11px}
+  .footer-col ul li a{font-size:12px}
+  .footer-brand p{font-size:12px}
+  .footer-bottom{gap:8px}
+  .gst-badge{font-size:9px;padding:4px 8px}
+
+  .testi-modal{padding:20px 16px;border-radius:12px}
+  .testi-modal h3{font-size:22px}
+  .testi-card{padding:18px 16px}
+  .testi-quote-mark{font-size:52px}
+  .testi-text{font-size:13px}
+  .btn-add-testi{font-size:11px;padding:9px 16px}
+
+  .photo-grid{grid-template-columns:1fr;grid-auto-rows:160px;gap:8px}
+
+  .client-tags{gap:6px}
+  .c-tag{font-size:10px;padding:5px 10px}
+
+  .float-bar{bottom:12px;right:12px;gap:6px}
+  .float-btn{padding:11px 13px}
+  .float-icon{font-size:18px}
+  .float-pulse{width:10px;height:10px}
+
+  .contact-strip .strip-text{width:100%}
+  body{cursor:auto}
+  .cursor,.cursor-ring{display:none}
+}
+/* ── MOBILE HAMBURGER MENU ────────────────────── */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border-radius:6px;border:none;background:rgba(77,139,255,0.1);transition:background 0.2s}
+.hamburger span{display:block;width:22px;height:2px;background:rgba(180,200,255,0.8);border-radius:2px;transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{position:fixed;top:58px;left:0;right:0;background:linear-gradient(135deg,#0a1628,#0d1e38);border-bottom:1px solid rgba(77,139,255,0.2);z-index:4999;transform:translateY(-100%);opacity:0;transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),opacity 0.35s;pointer-events:none;padding:0;box-shadow:0 8px 32px rgba(0,0,0,0.5)}
+.mobile-menu.open{transform:translateY(0);opacity:1;pointer-events:all}
+.mobile-menu a{display:flex;align-items:center;gap:10px;padding:14px 5%;color:rgba(180,200,255,0.75);font-size:13px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(77,139,255,0.08);transition:all 0.2s}
+.mobile-menu a:hover,.mobile-menu a.active{color:#fff;background:rgba(77,139,255,0.08);padding-left:7%}
+.mobile-menu a::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--fire);flex-shrink:0;opacity:0.6}
+.mobile-menu-cta{display:flex;gap:10px;padding:16px 5%;background:rgba(0,0,0,0.2)}
+.mobile-menu-cta a{flex:1;text-align:center;padding:12px;border-radius:8px;font-size:12px;font-weight:700;letter-spacing:0.5px;text-decoration:none;transition:all 0.2s}
+.mmcta-call{background:var(--fire);color:#fff}
+.mmcta-wa{background:var(--wa);color:#fff}
+@media(max-width:768px){
+  .hamburger{display:flex}
+  .nav-phone{display:none}
 }
 </style>
-</head>
 <body>
 
 <div class="cursor" id="cur"></div>
@@ -451,7 +623,25 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
     <a href="#contact">Contact</a>
   </nav>
   <a href="tel:+919821381597" class="nav-phone"><span>📞 +91 98213 81597</span></a>
+  <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#home" onclick="closeMobileMenu()">Home</a>
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#products" onclick="closeMobileMenu()">Products</a>
+  <a href="#infra" onclick="closeMobileMenu()">Infrastructure</a>
+  <a href="#photos" onclick="closeMobileMenu()">Photos</a>
+  <a href="#testimonials" onclick="closeMobileMenu()">Reviews</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  <div class="mobile-menu-cta">
+    <a href="tel:+919821381597" class="mmcta-call">📞 Call Now</a>
+    <a href="https://wa.me/919821381597" target="_blank" class="mmcta-wa">💬 WhatsApp</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section id="home">
@@ -940,6 +1130,20 @@ document.querySelectorAll('a,button').forEach(el => {
   el.addEventListener('mouseleave',()=>{cur.classList.remove('hover');ring.classList.remove('hover')});
 });
 
+// ── MOBILE MENU ─────────────────────────────────
+function toggleMobileMenu(){
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobile-menu');
+  hb.classList.toggle('open');
+  mm.classList.toggle('open');
+  document.body.style.overflow = mm.classList.contains('open') ? 'hidden' : '';
+}
+function closeMobileMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
 // ── REVEAL ON SCROLL ────────────────────────────
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)} });
@@ -957,7 +1161,7 @@ const sections=document.querySelectorAll('section[id]');
 window.addEventListener('scroll',()=>{
   let c='';
   sections.forEach(s=>{if(window.scrollY>=s.offsetTop-100)c=s.id});
-  document.querySelectorAll('nav a').forEach(a=>{
+  document.querySelectorAll('nav a, .mobile-menu a').forEach(a=>{
     const active=a.getAttribute('href')==='#'+c;
     a.classList.toggle('active',active);
   });
