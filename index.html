@@ -176,8 +176,9 @@ section{padding:100px 8%}
 .w-card:hover{border-color:rgba(255,92,26,0.2);transform:translateY(-4px)}
 .w-num{font-family:'Cormorant Garamond',sans-serif;font-weight:700;font-size:56px;color:rgba(255,92,26,0.07);line-height:1;position:absolute;top:16px;right:20px}
 .w-icon{font-size:36px;margin-bottom:16px;display:block}
-.w-card h3{font-family:'Cormorant Garamond',sans-serif;font-size:18px;font-weight:700;color:var(--white);margin-bottom:10px}
-.w-card p{font-size:13px;color:var(--steel);line-height:1.75}
+.w-card h3,.w-content h3{font-family:'Cormorant Garamond',sans-serif;font-size:18px;font-weight:700;color:var(--white);margin-bottom:10px}
+.w-card p,.w-content p{font-size:13px;color:var(--steel);line-height:1.75}
+.w-content{flex:1;min-width:0}
 
 #infra{background:var(--ink2)}
 .infra-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px}
@@ -390,6 +391,9 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .btn-load-more{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--line);color:var(--steel);padding:10px 24px;border-radius:8px;font-size:12px;font-weight:600;letter-spacing:1px;cursor:pointer;transition:all 0.2s;font-family:'Outfit',sans-serif}
 .btn-load-more:hover{border-color:rgba(255,92,26,0.3);color:var(--fire2)}
 
+/* ══════════════════════════════════════════════
+   TABLET  ≤ 1024px
+══════════════════════════════════════════════ */
 @media(max-width:1024px){
   #home{grid-template-columns:1fr;min-height:auto}
   .hero-right{display:none}
@@ -404,169 +408,317 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   .testi-grid{grid-template-columns:1fr 1fr}
 }
 
-/* ── TABLET ───────────────────────────────────── */
+/* ══════════════════════════════════════════════
+   MOBILE  ≤ 768px  —  full redesign
+══════════════════════════════════════════════ */
 @media(max-width:768px){
-  nav{display:none}
-  .nav-phone{font-size:11px;padding:6px 12px;letter-spacing:0}
-  header{padding:0 4%}
-  .logo-words strong{font-size:13px}
-  .logo-words span{display:none}
 
-  section{padding:60px 5%}
-  .hero-left{padding:48px 5% 40px}
-  .hero-h1{font-size:clamp(38px,9vw,60px);margin-bottom:18px}
-  .hero-badge{font-size:9px;letter-spacing:2px;padding:5px 10px;margin-bottom:18px}
-  .hero-desc{font-size:14px;margin-bottom:28px}
-  .hero-actions{flex-direction:column;gap:10px;margin-bottom:28px}
-  .btn-fire,.btn-ghost{width:100%;justify-content:center;padding:13px 20px}
-  .hero-kpis{flex-wrap:nowrap}
-  .kpi{padding:12px 6px}
-  .kpi-val{font-size:20px}
-  .kpi-lbl{font-size:9px;letter-spacing:1px}
-
-  .s-title{font-size:clamp(28px,7vw,48px);letter-spacing:-0.5px}
-  .s-desc{font-size:14px}
-  .about-layout{gap:32px}
-  .about-text p{font-size:13px}
-  .a-card{padding:18px 16px;gap:12px}
-  .a-icon{width:40px;height:40px;font-size:18px}
-
-  .products-masonry{grid-template-columns:1fr 1fr;gap:12px}
-  .prod-header{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:32px}
-  .prod-count{font-size:48px}
-  .p-visual{height:110px;font-size:40px}
-  .p-body{padding:14px}
-  .p-body h3{font-size:15px}
-  .p-body p{font-size:12px}
-
-  .why-grid{grid-template-columns:1fr;gap:16px;margin-top:32px}
-  .w-card{padding:24px 20px}
-
-  .infra-grid{grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
-  .i-card{padding:20px 14px}
-
-  .contact-strip{padding:40px 5%;flex-direction:column;align-items:flex-start;gap:24px}
-  .strip-text h2{font-size:clamp(22px,6vw,36px)}
-  .strip-btns{flex-direction:column;width:100%;gap:10px}
-  .strip-call,.strip-wa{width:100%;justify-content:center;padding:12px 20px}
-
-  .contact-grid{gap:28px}
-  .contact-form-wrap{padding:24px}
-  .form-row{grid-template-columns:1fr}
-  .pbc-num{font-size:20px}
-  .pbc-btns{flex-direction:row;flex-wrap:wrap}
-
-  .footer-grid{grid-template-columns:1fr;gap:32px}
-  footer{padding:40px 5% 28px}
-  .footer-bottom{flex-direction:column;align-items:flex-start;gap:10px}
-
-  .testi-grid{grid-template-columns:1fr;gap:16px}
-  .testi-header{flex-direction:column;align-items:flex-start;gap:14px}
-  .btn-add-testi{width:100%;justify-content:center}
-  .testi-card{padding:20px}
-  .testi-modal{padding:24px 20px}
-
-  .photo-grid{grid-template-columns:1fr 1fr;grid-auto-rows:130px;gap:8px}
-  .ph1,.ph2,.ph3,.ph4,.ph5,.ph6,.ph7{grid-column:span 1;grid-row:span 1}
-
-  .float-bar{bottom:16px;right:16px;gap:8px}
-  .float-btn span:not(.float-icon){display:none}
-  .float-btn{padding:12px 14px;border-radius:50%}
-  .float-icon{font-size:20px}
-}
-
-/* ── MOBILE ───────────────────────────────────── */
-@media(max-width:480px){
-  html{font-size:15px}
-  header{height:58px;padding:0 4%}
-  #home{padding-top:58px}
-  .logo-mark{width:36px;height:36px;font-size:10px}
-  .logo-words strong{font-size:12px}
-
-  section{padding:48px 4%}
-  .hero-left{padding:36px 4% 32px}
-  .hero-h1{font-size:clamp(32px,10vw,52px);line-height:0.95}
-  .hero-badge{font-size:8px;padding:4px 8px;letter-spacing:1.5px;margin-bottom:14px}
-  .luxury-sep{margin:8px 0 4px}
-  .sister-concerns{gap:5px}
-  .sister-name{font-size:8px;padding:2px 6px}
-  .hero-name-sep{margin:10px 0 14px}
-  .hero-desc{font-size:13px;line-height:1.7;margin-bottom:22px}
-  .hero-actions{gap:8px;margin-bottom:20px}
-  .btn-fire,.btn-ghost{font-size:12px;padding:12px 16px}
-  .hero-kpis{border-radius:8px}
-  .kpi{padding:10px 4px}
-  .kpi-val{font-size:17px}
-  .kpi-lbl{font-size:8px;letter-spacing:0}
-
-  .s-title{font-size:clamp(26px,8vw,40px)}
-  .s-label{font-size:9px;letter-spacing:3px}
-  .s-rule{margin-bottom:28px}
-
-  .about-layout{gap:24px}
-  .a-card{padding:14px;gap:10px;flex-direction:row;align-items:flex-start}
-  .a-icon{width:36px;height:36px;font-size:16px;flex-shrink:0}
-  .a-card h4{font-size:14px}
-  .a-card p{font-size:12px}
-
-  .products-masonry{grid-template-columns:1fr;gap:10px}
-  .p-card.wide,.p-card.tall{grid-column:span 1;grid-row:span 1}
-  .p-card.wide .p-visual,.p-card.tall .p-visual,.p-visual{height:120px;font-size:44px}
-  .prod-count{font-size:40px}
-
-  .why-grid{margin-top:24px;gap:12px}
-  .w-card{padding:20px 16px}
-  .w-card h3{font-size:16px}
-  .w-num{font-size:40px}
-
-  .infra-grid{grid-template-columns:1fr;gap:10px;margin-top:24px}
-  .i-card{padding:18px 14px;text-align:left;display:flex;align-items:flex-start;gap:14px}
-  .i-icon{font-size:28px;margin-bottom:0;flex-shrink:0}
-
-  .contact-strip{padding:32px 4%}
-  .strip-text h2{font-size:clamp(20px,7vw,30px)}
-  .strip-text p{font-size:13px}
-  .strip-call,.strip-wa{font-size:12px;padding:11px 16px}
-
-  .contact-form-wrap{padding:20px 16px;border-radius:10px}
-  .cf-title{font-size:22px}
-  .phone-big-card{padding:20px 16px}
-  .pbc-num{font-size:18px;letter-spacing:0}
-  .pbc-btns{gap:8px}
-  .pbc-call,.pbc-wa{padding:8px 14px;font-size:11px}
-  .info-card{padding:16px}
-  .info-card p{font-size:13px}
-  .fg input,.fg select,.fg textarea{font-size:13px;padding:11px 12px}
-  .form-submit{font-size:12px;letter-spacing:0.5px;padding:13px}
-
-  footer{padding:32px 4% 20px}
-  .footer-grid{gap:24px}
-  .footer-col h5{font-size:11px}
-  .footer-col ul li a{font-size:12px}
-  .footer-brand p{font-size:12px}
-  .footer-bottom{gap:8px}
-  .gst-badge{font-size:9px;padding:4px 8px}
-
-  .testi-modal{padding:20px 16px;border-radius:12px}
-  .testi-modal h3{font-size:22px}
-  .testi-card{padding:18px 16px}
-  .testi-quote-mark{font-size:52px}
-  .testi-text{font-size:13px}
-  .btn-add-testi{font-size:11px;padding:9px 16px}
-
-  .photo-grid{grid-template-columns:1fr;grid-auto-rows:160px;gap:8px}
-
-  .client-tags{gap:6px}
-  .c-tag{font-size:10px;padding:5px 10px}
-
-  .float-bar{bottom:12px;right:12px;gap:6px}
-  .float-btn{padding:11px 13px}
-  .float-icon{font-size:18px}
-  .float-pulse{width:10px;height:10px}
-
-  .contact-strip .strip-text{width:100%}
+  /* ── CURSOR off on touch ── */
   body{cursor:auto}
   .cursor,.cursor-ring{display:none}
+
+  /* ── HEADER ── */
+  nav{display:none}
+  .nav-phone{display:none}
+  header{height:60px;padding:0 5%}
+  .logo-mark{width:38px;height:38px;font-size:11px}
+  .logo-words strong{font-size:13.5px;letter-spacing:0.3px}
+  .logo-words span{display:none}
+
+  /* ── FLOATING BTNS — icon-only circles ── */
+  .float-bar{bottom:20px;right:16px;gap:10px}
+  .float-btn{
+    width:52px;height:52px;
+    border-radius:50%;padding:0;
+    align-items:center;justify-content:center;
+    box-shadow:0 6px 24px rgba(0,0,0,0.55);
+  }
+  .float-btn span:not(.float-icon){display:none}
+  .float-icon{font-size:22px;line-height:1}
+  .float-pulse{width:10px;height:10px;top:-3px;right:-3px}
+
+  /* ── HERO ── */
+  #home{padding-top:60px}
+  .hero-left{
+    padding:36px 5% 32px;
+    display:flex;flex-direction:column;align-items:flex-start;
+  }
+
+  /* badge */
+  .hero-badge{
+    font-size:9px;letter-spacing:2px;padding:5px 11px;
+    margin-bottom:20px;
+  }
+
+  /* big title */
+  .hero-h1{
+    font-size:clamp(38px,11vw,58px);
+    line-height:0.92;letter-spacing:-0.5px;
+    margin-bottom:0;
+  }
+
+  /* luxury separator — keep but tighten */
+  .luxury-sep{margin:14px 0 8px}
+  .luxury-sep-line{flex:1}
+
+  /* sister concerns — single row, pill style */
+  .sister-concerns{
+    display:flex;flex-direction:row;
+    align-items:center;flex-wrap:nowrap;
+    gap:6px;margin-top:0;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:2px;
+  }
+  .sister-label{
+    font-size:9px;letter-spacing:1.5px;
+    white-space:nowrap;flex-shrink:0;color:var(--steel);
+  }
+  .sister-name{
+    font-size:9px;padding:3px 9px;
+    white-space:nowrap;flex-shrink:0;
+    border-radius:20px;
+    letter-spacing:1px;
+  }
+
+  /* hero name separator */
+  .hero-name-sep{margin:14px 0 16px}
+
+  /* desc */
+  .hero-desc{
+    font-size:14px;line-height:1.75;
+    margin-bottom:24px;max-width:100%;
+    padding-left:14px;
+  }
+
+  /* buttons — stacked full-width */
+  .hero-actions{
+    flex-direction:column;gap:10px;
+    margin-bottom:28px;width:100%;
+  }
+  .btn-fire,.btn-ghost{
+    width:100%;justify-content:center;
+    padding:15px 20px;font-size:14px;
+    border-radius:10px;letter-spacing:0.5px;
+  }
+  .btn-fire{font-weight:700}
+
+  /* KPIs — 4 in a row, equal columns */
+  .hero-kpis{
+    width:100%;border-radius:10px;
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--line);overflow:hidden;
+  }
+  .kpi{
+    padding:14px 4px;border-right:1px solid var(--line);
+    border-bottom:none;
+  }
+  .kpi:last-child{border-right:none}
+  .kpi-val{font-size:19px;line-height:1}
+  .kpi-lbl{font-size:8.5px;letter-spacing:1px;margin-top:4px}
+
+  /* ── SECTIONS ── */
+  section{padding:56px 5%}
+
+  .s-label{font-size:10px;letter-spacing:3px}
+  .s-title{font-size:clamp(30px,8vw,48px);letter-spacing:-0.5px;line-height:1}
+  .s-rule{margin-bottom:28px}
+  .s-desc{font-size:14px;line-height:1.75}
+
+  /* ── ABOUT ── */
+  .about-layout{grid-template-columns:1fr;gap:28px}
+  .about-text p{font-size:13.5px;line-height:1.8}
+  .luxury-sep{margin:16px 0 12px}
+
+  /* about cards — horizontal layout per card */
+  .about-cards{gap:12px}
+  .a-card{
+    padding:16px 18px;gap:14px;
+    flex-direction:row;align-items:flex-start;
+    border-radius:12px;
+  }
+  .a-card::before{width:3px}
+  .a-icon{width:42px;height:42px;font-size:20px;border-radius:8px;flex-shrink:0}
+  .a-card h4{font-size:14px;margin-bottom:4px}
+  .a-card p{font-size:12.5px;line-height:1.65}
+  .client-tags{gap:6px}
+  .c-tag{font-size:10px;padding:5px 11px}
+
+  /* ── PRODUCTS ── */
+  .prod-header{flex-direction:row;align-items:center;justify-content:space-between;margin-bottom:24px;gap:8px}
+  .prod-count{font-size:44px;line-height:1}
+
+  /* 2-col grid on mobile */
+  .products-masonry{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .p-card.wide,.p-card.tall{grid-column:span 1;grid-row:span 1}
+  .p-visual{height:100px;font-size:38px}
+  .p-card.wide .p-visual,
+  .p-card.tall .p-visual{height:100px;font-size:38px}
+  .p-body{padding:12px 14px}
+  .p-cat{font-size:8px;letter-spacing:2px;margin-bottom:4px}
+  .p-body h3{font-size:13.5px;margin-bottom:5px;line-height:1.2}
+  .p-body p{font-size:11.5px;line-height:1.6;margin-bottom:10px}
+  .p-tag{font-size:8px;padding:3px 7px}
+  .p-enquire{font-size:10px;letter-spacing:1px}
+
+  /* ── CONTACT STRIP ── */
+  .contact-strip{
+    padding:36px 5%;
+    flex-direction:column;align-items:stretch;gap:20px;
+  }
+  .strip-text h2{font-size:clamp(24px,7vw,36px);line-height:1.1}
+  .strip-text p{font-size:14px}
+  .strip-btns{flex-direction:column;gap:10px;width:100%}
+  .strip-call,.strip-wa{
+    width:100%;justify-content:center;
+    padding:14px 20px;font-size:14px;border-radius:10px;
+  }
+
+  /* ── WHY US ── */
+  .why-grid{
+    grid-template-columns:1fr;
+    gap:12px;margin-top:28px;
+  }
+  .w-card{
+    padding:20px 20px;
+    display:flex;flex-direction:row;
+    align-items:flex-start;gap:16px;
+    border-radius:12px;
+  }
+  .w-num{
+    position:static;font-size:32px;
+    color:rgba(255,92,26,0.12);
+    line-height:1;flex-shrink:0;
+    font-family:'Cormorant Garamond',serif;font-weight:700;
+    width:36px;text-align:center;
+  }
+  .w-icon{font-size:28px;margin-bottom:0;flex-shrink:0;width:32px;text-align:center}
+  .w-card .w-content{flex:1;min-width:0}
+  .w-card h3{font-size:15px;margin-bottom:6px;line-height:1.2}
+  .w-card p{font-size:12.5px;line-height:1.65}
+
+  /* ── INFRASTRUCTURE ── */
+  .infra-grid{
+    grid-template-columns:1fr 1fr;
+    gap:10px;margin-top:28px;
+  }
+  .i-card{
+    padding:18px 14px;border-radius:10px;
+    text-align:center;
+  }
+  .i-icon{font-size:30px;margin-bottom:10px}
+  .i-card h4{font-size:13px;margin-bottom:5px}
+  .i-card p{font-size:11.5px;line-height:1.6}
+
+  /* ── GALLERY ── */
+  .photo-grid{
+    grid-template-columns:1fr 1fr;
+    grid-auto-rows:140px;gap:8px;margin-top:32px;
+  }
+  .ph1{grid-column:span 2;grid-row:span 1}
+  .ph2,.ph3,.ph4,.ph5,.ph6,.ph7{grid-column:span 1;grid-row:span 1}
+  .ph-emoji{font-size:40px}
+  .ph-label{font-size:12px}
+
+  /* ── CONTACT ── */
+  .contact-grid{
+    grid-template-columns:1fr;gap:24px;margin-top:32px;
+  }
+  .contact-left{gap:14px}
+  .phone-big-card{padding:20px 18px;border-radius:12px}
+  .pbc-label{font-size:9px;margin-bottom:10px}
+  .pbc-num{
+    font-size:22px;margin-bottom:12px;
+    letter-spacing:0.5px;
+  }
+  .pbc-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .pbc-call,.pbc-wa{
+    padding:11px 14px;font-size:12px;
+    justify-content:center;border-radius:8px;letter-spacing:0.5px;
+  }
+  .info-card{padding:16px 18px}
+  .info-card h5{font-size:9px;margin-bottom:8px}
+  .info-card p{font-size:13px;line-height:1.7}
+  .contact-form-wrap{padding:24px 20px;border-radius:12px}
+  .cf-title{font-size:22px;margin-bottom:4px}
+  .cf-sub{font-size:13px;margin-bottom:24px}
+  .form-row{grid-template-columns:1fr}
+  .fg{margin-bottom:14px}
+  .fg label{font-size:9px;letter-spacing:2px;margin-bottom:6px}
+  .fg input,.fg select,.fg textarea{font-size:14px;padding:12px 14px;border-radius:8px}
+  .form-submit{font-size:13px;padding:14px;letter-spacing:0.5px}
+
+  /* ── TESTIMONIALS ── */
+  #testimonials{padding:56px 5%}
+  .testi-header{flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:28px}
+  .btn-add-testi{width:100%;justify-content:center;font-size:12px}
+  .testi-grid{grid-template-columns:1fr;gap:12px;margin-bottom:28px}
+  .testi-card{padding:20px 18px;border-radius:12px}
+  .testi-quote-mark{font-size:56px;top:14px;right:14px}
+  .testi-text{font-size:13px;line-height:1.75}
+  .testi-name{font-size:14px}
+  .testi-modal{padding:24px 18px;border-radius:14px;margin:0 8px}
+  .testi-modal h3{font-size:22px}
+
+  /* ── FOOTER ── */
+  footer{padding:40px 5% 28px}
+  .footer-grid{grid-template-columns:1fr;gap:28px;margin-bottom:28px}
+  .footer-col h5{font-size:11px;margin-bottom:14px}
+  .footer-col ul{gap:9px}
+  .footer-col ul li a{font-size:12.5px}
+  .footer-brand p{font-size:12.5px;line-height:1.75;margin:12px 0 18px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:10px;padding-top:20px}
+  .footer-bottom p{font-size:11px}
+  .gst-badge{font-size:9px;padding:4px 9px}
+}
+
+/* ══════════════════════════════════════════════
+   SMALL PHONE  ≤ 400px  —  fine-tune
+══════════════════════════════════════════════ */
+@media(max-width:400px){
+  header{height:56px}
+  #home{padding-top:56px}
+  .logo-mark{width:34px;height:34px;font-size:10px}
+  .logo-words strong{font-size:12.5px}
+
+  section{padding:48px 4%}
+  .hero-left{padding:28px 4% 24px}
+  .hero-h1{font-size:clamp(34px,12vw,50px)}
+  .hero-badge{font-size:8.5px;padding:4px 10px}
+
+  .hero-kpis{grid-template-columns:repeat(4,1fr)}
+  .kpi-val{font-size:16px}
+  .kpi-lbl{font-size:7.5px;letter-spacing:0}
+
+  .products-masonry{grid-template-columns:1fr 1fr;gap:8px}
+  .p-visual{height:88px;font-size:34px}
+  .p-body h3{font-size:12.5px}
+  .p-body{padding:10px 12px}
+  .p-body p{display:none}
+
+  .why-grid{gap:10px}
+  .w-card{padding:16px 14px;gap:12px}
+  .w-icon{font-size:24px;width:28px}
+  .w-num{font-size:28px;width:30px}
+  .w-card h3{font-size:14px}
+  .w-card p{font-size:12px}
+
+  .infra-grid{gap:8px}
+  .i-card{padding:16px 12px}
+  .i-icon{font-size:26px}
+  .i-card h4{font-size:12px}
+  .i-card p{font-size:11px}
+
+  .pbc-num{font-size:19px}
+  .pbc-call,.pbc-wa{padding:9px 10px;font-size:11px}
+  .photo-grid{grid-auto-rows:120px}
+  .ph1{grid-column:span 2}
+
+  .float-btn{width:48px;height:48px}
+  .float-icon{font-size:20px}
 }
 /* ── MOBILE HAMBURGER MENU ────────────────────── */
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border-radius:6px;border:none;background:rgba(77,139,255,0.1);transition:background 0.2s}
@@ -574,7 +726,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-menu{position:fixed;top:58px;left:0;right:0;background:linear-gradient(135deg,#0a1628,#0d1e38);border-bottom:1px solid rgba(77,139,255,0.2);z-index:4999;transform:translateY(-100%);opacity:0;transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),opacity 0.35s;pointer-events:none;padding:0;box-shadow:0 8px 32px rgba(0,0,0,0.5)}
+.mobile-menu{position:fixed;top:60px;left:0;right:0;background:linear-gradient(135deg,#0a1628,#0d1e38);border-bottom:1px solid rgba(77,139,255,0.2);z-index:4999;transform:translateY(-100%);opacity:0;transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),opacity 0.35s;pointer-events:none;padding:0;box-shadow:0 8px 32px rgba(0,0,0,0.5)}
 .mobile-menu.open{transform:translateY(0);opacity:1;pointer-events:all}
 .mobile-menu a{display:flex;align-items:center;gap:10px;padding:14px 5%;color:rgba(180,200,255,0.75);font-size:13px;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(77,139,255,0.08);transition:all 0.2s}
 .mobile-menu a:hover,.mobile-menu a.active{color:#fff;background:rgba(77,139,255,0.08);padding-left:7%}
@@ -887,12 +1039,12 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   <h2 class="s-title reveal">Why Bharat Plastic<br/>Button Works?</h2>
   <div class="s-rule reveal"><div class="s-rule-line"></div><div class="s-rule-dot"></div></div>
   <div class="why-grid">
-    <div class="w-card reveal"><div class="w-num">01</div><span class="w-icon">🏆</span><h3>45+ Years of Industry Trust</h3><p>Since 1980, our name has meant consistent quality, on-time delivery and honest pricing built over four decades of work.</p></div>
-    <div class="w-card reveal" style="transition-delay:0.1s"><div class="w-num">02</div><span class="w-icon">⚙️</span><h3>End-to-End Manufacturing</h3><p>From raw granules to finished product - extrusion, weaving, stitching, printing - all in our Bhiwandi plant, eliminating middlemen.</p></div>
-    <div class="w-card reveal" style="transition-delay:0.2s"><div class="w-num">03</div><span class="w-icon">🎨</span><h3>Full Customisation</h3><p>Size, colour, thickness, design, cut - every product tailored to your exact spec with no minimum order restrictions.</p></div>
-    <div class="w-card reveal"><div class="w-num">04</div><span class="w-icon">🔬</span><h3>Rigorous Quality Testing</h3><p>Tensile testing, denier testing and electronic weighing on every batch. Zero-defect commitment by dedicated QC controllers.</p></div>
-    <div class="w-card reveal" style="transition-delay:0.1s"><div class="w-num">05</div><span class="w-icon">💰</span><h3>Market-Leading Prices</h3><p>Direct manufacturer pricing - no trading margins. Barsati sheets from ₹70/kg, warning tapes ₹65/roll, bulk garbage bags competitively priced.</p></div>
-    <div class="w-card reveal" style="transition-delay:0.2s"><div class="w-num">06</div><span class="w-icon">🌍</span><h3>Government-Grade Reliability</h3><p>Trusted by Indian Navy, Indian Railways and International Cargo - clients who demand zero compromise on quality or delivery.</p></div>
+    <div class="w-card reveal"><div class="w-num">01</div><span class="w-icon">🏆</span><div class="w-content"><h3>45+ Years of Industry Trust</h3><p>Since 1980, our name has meant consistent quality, on-time delivery and honest pricing built over four decades of work.</p></div></div>
+    <div class="w-card reveal" style="transition-delay:0.1s"><div class="w-num">02</div><span class="w-icon">⚙️</span><div class="w-content"><h3>End-to-End Manufacturing</h3><p>From raw granules to finished product - extrusion, weaving, stitching, printing - all in our Bhiwandi plant, eliminating middlemen.</p></div></div>
+    <div class="w-card reveal" style="transition-delay:0.2s"><div class="w-num">03</div><span class="w-icon">🎨</span><div class="w-content"><h3>Full Customisation</h3><p>Size, colour, thickness, design, cut - every product tailored to your exact spec with no minimum order restrictions.</p></div></div>
+    <div class="w-card reveal"><div class="w-num">04</div><span class="w-icon">🔬</span><div class="w-content"><h3>Rigorous Quality Testing</h3><p>Tensile testing, denier testing and electronic weighing on every batch. Zero-defect commitment by dedicated QC controllers.</p></div></div>
+    <div class="w-card reveal" style="transition-delay:0.1s"><div class="w-num">05</div><span class="w-icon">💰</span><div class="w-content"><h3>Market-Leading Prices</h3><p>Direct manufacturer pricing - no trading margins. Barsati sheets from ₹70/kg, warning tapes ₹65/roll, bulk garbage bags competitively priced.</p></div></div>
+    <div class="w-card reveal" style="transition-delay:0.2s"><div class="w-num">06</div><span class="w-icon">🌍</span><div class="w-content"><h3>Government-Grade Reliability</h3><p>Trusted by Indian Navy, Indian Railways and International Cargo - clients who demand zero compromise on quality or delivery.</p></div></div>
   </div>
 </section>
 
